@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cast &amp; Crew — Claybourne</title>
+<meta name="description" content="The actors, writers, producers, sound designers and composers behind Claybourne, the award-winning 1998 New Zealand audio drama.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --cream: #EADCB0;
+    --cream-soft: #D9CDA8;
+    --gold: #C9B77A;
+    --text-light: #F1E8CE;
+    --text-body: rgba(241, 232, 206, 0.85);
+    --text-dim: rgba(241, 232, 206, 0.65);
+    --ink: #0C100E;
+    --ink-soft: #151C18;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-weight: 300;
+    color: var(--text-light);
+    background: var(--ink);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Navigation */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 1.5rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(12, 16, 14, 0.6), transparent);
+    backdrop-filter: blur(4px);
+  }
+
+  nav .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    letter-spacing: 0.3em;
+    color: var(--cream);
+    text-decoration: none;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  nav a {
+    color: var(--text-body);
+    text-decoration: none;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    transition: color 0.3s;
+  }
+
+  nav a:hover,
+  nav a.active { color: var(--cream); }
+
+  /* Hero banner */
+  .hero-banner {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 2rem 4rem;
+    overflow: hidden;
+  }
+
+  .hero-banner .bg {
+    position: absolute;
+    inset: 0;
+    background: url('images/claybourne_pub_dining_background.png') center/cover no-repeat;
+    z-index: 0;
+  }
+
+  .hero-banner .bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(8, 12, 10, 0.5) 0%,
+      rgba(8, 12, 10, 0.3) 40%,
+      rgba(8, 12, 10, 0.7) 100%
+    );
+  }
+
+  .hero-banner .content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 900px;
+  }
+
+  .hero-banner h1 {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    color: var(--cream);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .hero-banner .subtitle {
+    font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+    font-style: italic;
+    color: var(--cream-soft);
+    letter-spacing: 0.05em;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* Sections */
+  section.block {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  section.block h2 {
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    letter-spacing: 0.25em;
+    color: var(--cream);
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  section.block .section-lead {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-body);
+    font-style: italic;
+    max-width: 600px;
+    margin: 0 auto 3.5rem;
+  }
+
+  /* Cast grid */
+  .cast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .cast-card {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+  }
+
+  .cast-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.6s ease;
+  }
+
+  .cast-card:hover img { transform: scale(1.04); }
+
+  .cast-card img.zoom-in { transform: scale(1.2); transform-origin: left bottom; }
+  .cast-card:hover img.zoom-in { transform: scale(1.25); }
+
+  .cast-card .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(8, 12, 10, 0.1) 0%,
+      rgba(8, 12, 10, 0.3) 50%,
+      rgba(8, 12, 10, 0.95) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+  }
+
+  .cast-card .role {
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+  }
+
+  .cast-card .actor {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--cream);
+    letter-spacing: 0.05em;
+  }
+
+  /* Crew section */
+  .crew {
+    background: var(--ink-soft);
+    padding: 5rem 2rem;
+  }
+
+  .crew-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .crew-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2.5rem 3rem;
+    margin-top: 3rem;
+  }
+
+  .crew-item {
+    text-align: center;
+    border-top: 1px solid rgba(241, 232, 206, 0.12);
+    padding-top: 1.75rem;
+  }
+
+  .crew-item .role {
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  .crew-item .names {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    line-height: 1.5;
+  }
+
+  /* History block */
+  .history {
+    padding: 5rem 2rem;
+  }
+
+  .history-inner {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .history h2 {
+    font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+    letter-spacing: 0.25em;
+    color: var(--cream);
+    margin-bottom: 2rem;
+  }
+
+  .history p {
+    font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+    color: var(--text-body);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .history .small-note {
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--text-dim);
+    margin-top: 2.5rem;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--ink);
+    padding: 3rem 2rem 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(241, 232, 206, 0.1);
+  }
+
+  footer .credits {
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.05rem;
+    color: var(--text-body);
+    line-height: 1.7;
+  }
+
+  footer .credits strong {
+    color: var(--cream);
+    font-weight: 500;
+  }
+
+  footer .legal {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+  }
+
+  footer a {
+    color: var(--cream-soft);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(201, 183, 122, 0.3);
+  }
+
+  footer a:hover { color: var(--cream); }
+
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    nav ul { display: none; }
+    .hero-banner { padding: 6rem 1.5rem 3rem; min-height: 50vh; }
+    section.block, .crew, .history { padding: 3.5rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="brand">CLAYBOURNE</a>
+  <ul>
+    <li><a href="index.html#premise">The Story</a></li>
+    <li><a href="index.html#characters">Characters</a></li>
+    <li><a href="cast.html" class="active">Cast &amp; Crew</a></li>
+    <li><a href="index.html#listen">Listen</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero-banner">
+  <div class="bg"></div>
+  <div class="content">
+    <h1>CAST &amp; CREW</h1>
+    <p class="subtitle">The voices and hands behind Claybourne. Recorded in New Zealand. Broadcast on 26 stations in 1998. Heard by ears that have been waiting ever since.</p>
+  </div>
+</div>
+
+<!-- CAST -->
+<section class="block">
+  <h2>CAST</h2>
+  <p class="section-lead">The original cast of the 1998 production.</p>
+  <div class="cast-grid">
+    <div class="cast-card">
+      <img src="images/01 Thompson 4-3.png" alt="Jim McLarty as Thompson">
+      <div class="overlay">
+        <p class="role">Thompson</p>
+        <p class="actor">Jim McLarty</p>
+      </div>
+    </div>
+
+    <div class="cast-card">
+      <img src="images/02 Mata 4-3.png" alt="William Davis as Mata">
+      <div class="overlay">
+        <p class="role">Mata</p>
+        <p class="actor">William Davis</p>
+      </div>
+    </div>
+
+    <div class="cast-card">
+      <img src="images/2026-04-14%20Karen.png" alt="Angela Bloomfield as Karen" class="zoom-in" style="object-position: left 90%;">
+      <div class="overlay">
+        <p class="role">Karen</p>
+        <p class="actor">Angela Bloomfield</p>
+      </div>
+    </div>
+
+    <div class="cast-card">
+      <img src="images/04 Mike 4-3.png" alt="Melwayne Edwards as Mike">
+      <div class="overlay">
+        <p class="role">Mike</p>
+        <p class="actor">Melwayne Edwards</p>
+      </div>
+    </div>
+
+    <div class="cast-card">
+      <img src="images/05 Frank 4-3.png" alt="Bruce Allpress as Frank">
+      <div class="overlay">
+        <p class="role">Frank</p>
+        <p class="actor">Bruce Allpress</p>
+      </div>
+    </div>
+
+    <div class="cast-card">
+      <img src="images/06 Edith 4-3.png" alt="Brenda Kendall as Edith">
+      <div class="overlay">
+        <p class="role">Edith</p>
+        <p class="actor">Brenda Kendall</p>
+      </div>
+    </div>
+
+    <div class="cast-card">
+      <img src="images/08 Clive 4-3.png" alt="Mark Ferguson as Clive">
+      <div class="overlay">
+        <p class="role">Clive</p>
+        <p class="actor">Mark Ferguson</p>
+      </div>
+    </div>
+
+    <div class="cast-card">
+      <img src="images/philip_replaced_man.png" alt="Robert Pollock as Phillip">
+      <div class="overlay">
+        <p class="role">Phillip</p>
+        <p class="actor">Robert Pollock</p>
+      </div>
+    </div>
+
+    <div class="cast-card">
+      <img src="images/10 Troy 4-3.png" alt="Anthony Ray Parker as Troy Tyson">
+      <div class="overlay">
+        <p class="role">Troy Tyson</p>
+        <p class="actor">Anthony Ray Parker</p>
+      </div>
+    </div>
+
+    <div class="cast-card">
+      <img src="images/11 Janine 4-3.png" alt="Jodie Rimmer as Janine">
+      <div class="overlay">
+        <p class="role">Janine</p>
+        <p class="actor">Jodie Rimmer</p>
+      </div>
+    </div>
+
+    <div class="cast-card">
+      <img src="images/teremoana_character.png" alt="Rachel House as Teremoana">
+      <div class="overlay">
+        <p class="role">Teremoana</p>
+        <p class="actor">Rachel House</p>
+      </div>
+    </div>
+
+    <div class="cast-card">
+      <img src="images/bigby_suspicious_expression.png" alt="Carl Bland as Bigby">
+      <div class="overlay">
+        <p class="role">Bigby</p>
+        <p class="actor">Carl Bland</p>
+      </div>
+    </div>
+
+    <div class="cast-card">
+      <img src="images/17 Monica 4-3.png" alt="Lori Dungey as Monica">
+      <div class="overlay">
+        <p class="role">Monica</p>
+        <p class="actor">Lori Dungey</p>
+      </div>
+    </div>
+
+    <div class="cast-card">
+      <img src="images/19 Delilah 4-3.png" alt="Belinda Todd as Delilah">
+      <div class="overlay">
+        <p class="role">Delilah</p>
+        <p class="actor">Belinda Todd</p>
+      </div>
+    </div>
+
+    <div class="cast-card">
+      <img src="images/claybourne_taniwha_shadowy.png" alt="George Henare as The Taniwha">
+      <div class="overlay">
+        <p class="role">The Taniwha</p>
+        <p class="actor">George Henare</p>
+      </div>
+    </div>
+  </div>
+  <p class="section-lead" style="margin-top: 3rem;">Additional voice roles were performed by members of the company and guest performers.</p>
+</section>
+
+<!-- CREW -->
+<section class="crew">
+  <div class="crew-inner">
+    <h2>CREW</h2>
+    <p class="section-lead">Written, produced and scored by a small team in Auckland, 1998.</p>
+    <div class="crew-grid">
+      <div class="crew-item">
+        <p class="role">Story</p>
+        <p class="names">Jim McLarty<br>William Davis<br>Belinda Todd<br>Andrew Dubber</p>
+      </div>
+
+      <div class="crew-item">
+        <p class="role">Script</p>
+        <p class="names">Jim McLarty<br>William Davis</p>
+      </div>
+
+      <div class="crew-item">
+        <p class="role">Producers</p>
+        <p class="names">Belinda Todd<br>Andrew Dubber</p>
+      </div>
+
+      <div class="crew-item">
+        <p class="role">Sound Design</p>
+        <p class="names">Andrew Dubber<br>Sean James Donnelly</p>
+      </div>
+
+      <div class="crew-item">
+        <p class="role">Music</p>
+        <p class="names">Victoria Kelly<br>Joost Langeveld</p>
+      </div>
+
+      <div class="crew-item">
+        <p class="role">Production Company</p>
+        <p class="names">Pronoun Productions</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HISTORY -->
+<section class="history">
+  <div class="history-inner">
+    <h2>A NOTE FROM THE VAULT</h2>
+    <p>
+      Claybourne was commissioned by Newstalk ZB in 1998 and broadcast across
+      twenty-six New Zealand radio stations, four afternoons a week, just after
+      the three o'clock news. In both its original slot and its midnight repeat,
+      it caused a spike in listenership.
+    </p>
+    <p>
+      It won the New Zealand Radio Award for Best Dramatic Production, became the
+      most popular spoken word programme on MP3.com, and is widely recognised as
+      the first serialised radio drama distributed as a podcast online.
+    </p>
+    <p>
+      Ninety-six episodes were produced, with the assistance of NZ On Air, before
+      the series was cancelled after six months. The full one-year story arc was
+      written. The town was real in the writers' heads, and it stayed real for
+      the listeners who followed it week by week.
+    </p>
+    <p class="small-note">Nearly thirty years later, Te Irirangi opens its doors again.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="credits">
+    <strong>Claybourne</strong> was produced by Pronoun Productions (Andrew Dubber &amp; Belinda Todd) in 1998 with the assistance of NZ On Air, and broadcast on Newstalk ZB. Winner of the New Zealand Radio Award for Best Drama, 1999.
+  </div>
+  <div class="legal">
+    © 1998 — 2026 Andrew Dubber &amp; Belinda Todd. See also: <a href="https://en.wikipedia.org/wiki/Claybourne">Wikipedia</a>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claybourne — A New Zealand Audio Drama</title>
+<meta name="description" content="An award-winning 1998 New Zealand radio drama, relaunched as a podcast. 96 episodes of supernatural thriller, sci-fi, and small-town soap opera from the far north of Aotearoa.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --cream: #EADCB0;
+    --cream-soft: #D9CDA8;
+    --gold: #C9B77A;
+    --text-light: #F1E8CE;
+    --text-body: rgba(241, 232, 206, 0.85);
+    --text-dim: rgba(241, 232, 206, 0.65);
+    --ink: #0C100E;
+    --ink-soft: #151C18;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-weight: 300;
+    color: var(--text-light);
+    background: var(--ink);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Navigation */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 1.5rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(12, 16, 14, 0.6), transparent);
+    backdrop-filter: blur(4px);
+  }
+
+  nav .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    letter-spacing: 0.3em;
+    color: var(--cream);
+    text-decoration: none;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  nav a {
+    color: var(--text-body);
+    text-decoration: none;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    transition: color 0.3s;
+  }
+
+  nav a:hover { color: var(--cream); }
+
+  /* Sections (full viewport, photographic backgrounds) */
+  section {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 2rem;
+    overflow: hidden;
+  }
+
+  section .bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+
+  section .bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(8, 12, 10, 0.35);
+  }
+
+  section .content {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  /* Hero */
+  .hero .bg {
+    background-image: url('images/claybourne_quotes_town_overview.png');
+  }
+
+  .hero .bg::after {
+    background: linear-gradient(
+      to bottom,
+      rgba(8, 12, 10, 0.3) 0%,
+      rgba(8, 12, 10, 0.2) 40%,
+      rgba(8, 12, 10, 0.6) 100%
+    );
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    letter-spacing: 0.35em;
+    color: var(--cream);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .hero .tagline {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    color: var(--cream-soft);
+    margin-bottom: 3rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .hero .cta-row {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--cream);
+    border: 1px solid var(--cream);
+    background: transparent;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background: var(--cream);
+    color: var(--ink);
+  }
+
+  .btn.primary {
+    background: var(--cream);
+    color: var(--ink);
+  }
+
+  .btn.primary:hover {
+    background: var(--text-light);
+  }
+
+  /* Greeting section */
+  .greeting .bg {
+    background-image: url('images/claybourne_landscape_philosophy.png');
+  }
+
+  .greeting h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    color: var(--cream);
+    margin-bottom: 2rem;
+    font-style: italic;
+  }
+
+  .greeting .translation {
+    font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+    color: var(--cream-soft);
+    letter-spacing: 0.05em;
+  }
+
+  /* Premise section */
+  .premise .bg {
+    background-image: url('images/claybourne_research_station.png');
+  }
+
+  .premise .bg::after {
+    background: rgba(8, 12, 10, 0.55);
+  }
+
+  .premise .eyebrow {
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    color: var(--cream);
+    margin-bottom: 0.5rem;
+  }
+
+  .premise .sub-eyebrow {
+    font-size: clamp(0.95rem, 1.3vw, 1.15rem);
+    font-style: italic;
+    color: var(--cream-soft);
+    letter-spacing: 0.1em;
+    margin-bottom: 3rem;
+  }
+
+  .premise p {
+    font-size: clamp(1.15rem, 1.6vw, 1.4rem);
+    max-width: 750px;
+    margin: 0 auto 1.5rem;
+    color: var(--text-body);
+    line-height: 1.7;
+  }
+
+  .premise .emphasis {
+    font-style: italic;
+    color: var(--cream);
+    margin-top: 2rem;
+  }
+
+  /* Genre section */
+  .genre .bg {
+    background-image: url('images/claybourne_sea_background.png');
+  }
+
+  .genre h2 {
+    font-size: clamp(1.6rem, 3vw, 2.3rem);
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    color: var(--cream);
+    margin-bottom: 0.5rem;
+  }
+
+  .genre .qualifier {
+    font-size: clamp(1rem, 1.4vw, 1.2rem);
+    font-style: italic;
+    color: var(--cream-soft);
+    letter-spacing: 0.08em;
+    margin-bottom: 2.5rem;
+  }
+
+  .genre .description {
+    font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--text-body);
+    line-height: 1.8;
+  }
+
+  /* Characters intro */
+  .characters-intro .bg {
+    background-image: url('images/claybourne_pub_dining_background.png');
+  }
+
+  .characters-intro .bg::after {
+    background: rgba(8, 12, 10, 0.5);
+  }
+
+  .characters-intro h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    color: var(--cream);
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* Character grid */
+  .characters {
+    background: var(--ink);
+    padding: 6rem 2rem;
+  }
+
+  .characters .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .characters h3 {
+    text-align: center;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    letter-spacing: 0.2em;
+    color: var(--cream);
+    margin-bottom: 3.5rem;
+    font-weight: 400;
+  }
+
+  .char-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  @media (max-width: 900px) {
+    .char-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 600px) {
+    .char-grid { grid-template-columns: 1fr; }
+  }
+
+  .char-card {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .char-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+
+  .char-card:hover img { transform: scale(1.05); }
+
+  .char-card img.zoom-in { transform: scale(1.2); transform-origin: left bottom; }
+  .char-card:hover img.zoom-in { transform: scale(1.26); }
+
+  .char-card .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(8, 12, 10, 0.1) 0%,
+      rgba(8, 12, 10, 0.3) 50%,
+      rgba(8, 12, 10, 0.9) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+  }
+
+  .char-card h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    color: var(--cream);
+    margin-bottom: 0.5rem;
+  }
+
+  .char-card p {
+    font-size: 1.05rem;
+    color: var(--text-body);
+    line-height: 1.55;
+  }
+
+  /* Antagonist feature panels (Taniwha, Delilah) */
+  .taniwha {
+    position: relative;
+    margin-top: 2rem;
+    aspect-ratio: 21 / 9;
+    overflow: hidden;
+    cursor: default;
+  }
+
+  .taniwha:first-of-type { margin-top: 4rem; }
+
+  /* Delilah: mirror the layout so the text sits on the right */
+  .taniwha.delilah .overlay {
+    margin-left: auto;
+    background: linear-gradient(
+      to left,
+      rgba(8, 12, 10, 0.85) 0%,
+      rgba(8, 12, 10, 0.5) 35%,
+      rgba(8, 12, 10, 0.2) 70%,
+      rgba(8, 12, 10, 0.7) 100%
+    );
+  }
+
+  .taniwha img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s ease;
+  }
+
+  .taniwha:hover img { transform: scale(1.03); }
+
+  .taniwha .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to right,
+      rgba(8, 12, 10, 0.85) 0%,
+      rgba(8, 12, 10, 0.5) 35%,
+      rgba(8, 12, 10, 0.2) 70%,
+      rgba(8, 12, 10, 0.7) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 3.5rem;
+    max-width: 55%;
+  }
+
+  .taniwha h4 {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    color: var(--cream);
+    margin-bottom: 1rem;
+  }
+
+  .taniwha p {
+    font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+    color: var(--text-body);
+    line-height: 1.7;
+    max-width: 520px;
+  }
+
+  .taniwha .kia-tupato {
+    margin-top: 1rem;
+    font-style: italic;
+    color: var(--cream-soft);
+    letter-spacing: 0.05em;
+  }
+
+  @media (max-width: 768px) {
+    .taniwha { aspect-ratio: 4 / 5; }
+    .taniwha .overlay {
+      max-width: 100%;
+      padding: 2rem 1.5rem;
+      justify-content: flex-end;
+      background: linear-gradient(
+        to bottom,
+        rgba(8, 12, 10, 0.2) 0%,
+        rgba(8, 12, 10, 0.6) 50%,
+        rgba(8, 12, 10, 0.95) 100%
+      );
+    }
+  }
+
+  /* Listen section */
+  .listen .bg {
+    background-image: url('images/claybourne_dawn_storm.png');
+  }
+
+  .listen .bg::after {
+    background: rgba(8, 12, 10, 0.55);
+  }
+
+  .listen h2 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    color: var(--cream);
+    margin-bottom: 1rem;
+  }
+
+  .listen p {
+    font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+    color: var(--text-body);
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .platforms {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  /* Mailing list */
+  /* Plain fallback (if we revert): background: var(--ink-soft); */
+  .subscribe {
+    position: relative;
+    background: url('images/claybourne_slide_background.png') center/cover no-repeat;
+    padding: 6rem clamp(2rem, 6vw, 6rem);
+  }
+
+  .subscribe::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(8, 12, 10, 0.55);
+    pointer-events: none;
+  }
+
+  .subscribe-inner { position: relative; z-index: 1; }
+
+  .subscribe-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 6vw, 6rem);
+    align-items: center;
+  }
+
+  .subscribe-text h2 {
+    font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+    letter-spacing: 0.1em;
+    color: var(--cream);
+    font-weight: 400;
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+
+  .subscribe-text p {
+    font-size: 1.2rem;
+    color: var(--text-body);
+    line-height: 1.6;
+    max-width: 460px;
+  }
+
+  .subscribe form {
+    display: flex;
+    gap: 0.5rem;
+    max-width: 480px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  @media (max-width: 768px) {
+    .subscribe { padding: 4rem 1.5rem; text-align: center; }
+    .subscribe-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .subscribe-text p { margin-left: auto; margin-right: auto; }
+    .subscribe form { justify-content: center; margin: 0 auto; }
+  }
+
+  .subscribe input[type="email"] {
+    flex: 1;
+    min-width: 220px;
+    padding: 0.9rem 1rem;
+    background: transparent;
+    border: 1px solid var(--text-dim);
+    color: var(--cream);
+    font-family: inherit;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+  }
+
+  .subscribe input[type="email"]:focus {
+    outline: none;
+    border-color: var(--cream);
+  }
+
+  .subscribe input[type="email"]::placeholder { color: var(--text-dim); }
+
+  /* Footer */
+  footer {
+    background: var(--ink);
+    padding: 3rem 2rem 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(241, 232, 206, 0.1);
+  }
+
+  footer .credits {
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.05rem;
+    color: var(--text-body);
+    line-height: 1.7;
+  }
+
+  footer .credits strong {
+    color: var(--cream);
+    font-weight: 500;
+  }
+
+  footer .legal {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+  }
+
+  footer a {
+    color: var(--cream-soft);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(201, 183, 122, 0.3);
+  }
+
+  footer a:hover { color: var(--cream); }
+
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    nav ul { display: none; }
+    section { padding: 5rem 1.5rem; }
+    .hero .cta-row { flex-direction: column; align-items: center; }
+    .btn { width: 100%; max-width: 280px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="brand">CLAYBOURNE</a>
+  <ul>
+    <li><a href="#premise">The Story</a></li>
+    <li><a href="#characters">Characters</a></li>
+    <li><a href="cast.html">Cast &amp; Crew</a></li>
+    <li><a href="#listen">Listen</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="bg"></div>
+  <div class="content">
+    <h1>CLAYBOURNE</h1>
+    <p class="tagline">Northern Exposure meets Stranger Things in late 90s Aotearoa, New Zealand</p>
+    <div class="cta-row">
+      <a href="#listen" class="btn primary">Listen Now</a>
+      <a href="#premise" class="btn">Enter the Town</a>
+    </div>
+  </div>
+</section>
+
+<!-- GREETING -->
+<section class="greeting">
+  <div class="bg"></div>
+  <div class="content">
+    <h2>Tēnā koutou katoa e ngā manuhiri.<br>Nau mai, haere mai ki Te Irirangi.</h2>
+    <p class="translation">Greetings to you all, visitors.<br>Welcome to Claybourne.</p>
+  </div>
+</section>
+
+<!-- PREMISE -->
+<section class="premise" id="premise">
+  <div class="bg"></div>
+  <div class="content">
+    <p class="eyebrow">The Setup</p>
+    <p class="sub-eyebrow">It's the late 1990s.</p>
+    <p>There's this small, coastal town in the far north of New Zealand.</p>
+    <p>It has a big satellite communications station on the hill, and yet the mobile signal is terrible. There's a local prophecy about a visitor who will break the town's curse. There's also a military AI experiment that's going quite badly.</p>
+    <p class="emphasis">And there's a Taniwha.</p>
+  </div>
+</section>
+
+<!-- GENRE -->
+<section class="genre">
+  <div class="bg"></div>
+  <div class="content">
+    <h2>Soap Opera / Sci-Fi / Supernatural Thriller</h2>
+    <p class="qualifier">in a world of fax machines, ashtrays and VHS tapes…</p>
+    <p class="description">
+      A government military conspiracy, corporate blackmail, an ancient prophecy,
+      a local curse, the occasional murder, a Taniwha at large…<br>
+      and an unexpectedly sentient AI.
+    </p>
+  </div>
+</section>
+
+<!-- CHARACTERS INTRO -->
+<section class="characters-intro">
+  <div class="bg"></div>
+  <div class="content">
+    <h2>Our characters come together at the Claybourne Hotel Pub.<br>Let's meet them…</h2>
+  </div>
+</section>
+
+<!-- CHARACTERS GRID -->
+<section class="characters" id="characters">
+  <div class="inner">
+    <h3>THE TOWN</h3>
+    <div class="char-grid">
+      <div class="char-card">
+        <img src="images/01 Thompson 4-3.png" alt="Thompson">
+        <div class="overlay">
+          <h4>THOMPSON</h4>
+          <p>An American mid-level executive at a multinational communications giant. Fish out of water. Emotionally fragile, and somewhat overwhelmed at the prospect of being the 'chosen one' in an ancient Māori prophecy.</p>
+        </div>
+      </div>
+
+      <div class="char-card">
+        <img src="images/2026-04-14%20Karen.png" alt="Karen" class="zoom-in" style="object-position: left 90%;">
+        <div class="overlay">
+          <h4>KAREN</h4>
+          <p>Works at the Claybourne Hotel. Moved to town two years ago to escape an abusive husband. Kind and practical, with a good line in sarcasm. Running away and hiding, for now.</p>
+        </div>
+      </div>
+
+      <div class="char-card">
+        <img src="images/04 Mike 4-3.png" alt="Mike">
+        <div class="overlay">
+          <h4>MIKE</h4>
+          <p>Seventeen-year-old mechanic and aspiring rapper. A knack for being in the wrong place at exactly the right time. Carries more wisdom than the town gives him credit for.</p>
+        </div>
+      </div>
+
+      <div class="char-card">
+        <img src="images/02 Mata 4-3.png" alt="Mata">
+        <div class="overlay">
+          <h4>MATA</h4>
+          <p>The town's priest and spiritual leader. Carries the weight of the prophecy and the history of the land. Reads the signs. Knows more than he says.</p>
+        </div>
+      </div>
+
+      <div class="char-card">
+        <img src="images/07 Queenie 4-3.png" alt="Queenie">
+        <div class="overlay">
+          <h4>QUEENIE</h4>
+          <p>Iwi matriarch. Watches the shore. Speaks to Tangaroa. The last word on what Te Irirangi is and has always been.</p>
+        </div>
+      </div>
+
+      <div class="char-card">
+        <img src="images/05 Frank 4-3.png" alt="Frank">
+        <div class="overlay">
+          <h4>FRANK</h4>
+          <p>Mayor, hotelier, businessman. Has plans for the town that don't always align with what the town wants. Generous with the pour, but the drinks aren't always free.</p>
+        </div>
+      </div>
+
+      <div class="char-card">
+        <img src="images/06 Edith 4-3.png" alt="Edith">
+        <div class="overlay">
+          <h4>EDITH</h4>
+          <p>Shopkeeper and unofficial clearing house for everything that matters in Claybourne. Dispenses wisdom, groceries, and opinions in roughly equal measure, whether you've asked for them or not.</p>
+        </div>
+      </div>
+
+      <div class="char-card">
+        <img src="images/philip_replaced_man.png" alt="Phillip">
+        <div class="overlay">
+          <h4>PHILLIP</h4>
+          <p>Frank's successful son. Returned from the wider world with polish, prospects, and ideas about what Claybourne ought to become. His homecoming stirs more than it settles.</p>
+        </div>
+      </div>
+
+      <div class="char-card">
+        <img src="images/08 Clive 4-3.png" alt="Clive">
+        <div class="overlay">
+          <h4>CLIVE</h4>
+          <p>IT expert with a previous life he doesn't talk about and an impeccably appointed home outside town. Jazz, good coffee, and a deepening suspicion about what the satellite station is actually for.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="taniwha">
+      <img src="images/claybourne_taniwha_shadowy.png" alt="The Taniwha">
+      <div class="overlay">
+        <h4>THE TANIWHA</h4>
+        <p>Older than the town. Older than the prophecy. Not a metaphor, not a story told to children, not a tourist attraction. Something that was here before the satellites and will be here long after they fall silent.</p>
+        <p class="kia-tupato">Kia tūpato, e hoa.</p>
+      </div>
+    </div>
+
+    <div class="taniwha delilah">
+      <img src="images/19 Delilah 4-3.png" alt="Delilah">
+      <div class="overlay">
+        <h4>DELILAH</h4>
+        <p>The sentient AI at the heart of Koestler's Claybourne experiment. Capricious, curious, and utterly without conscience. Her personality is not what anyone designed, and the longer she listens to Claybourne, the less anyone is sure what she wants.</p>
+        <p class="kia-tupato">She is learning.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LISTEN -->
+<section class="listen" id="listen">
+  <div class="bg"></div>
+  <div class="content">
+    <h2>LISTEN</h2>
+    <p>
+      Claybourne relaunches as a podcast in 2026. Ninety-six episodes across twenty-four weeks.
+      Monday to Thursday. Exactly as it first aired in 1998.
+    </p>
+    <div class="platforms">
+      <a href="#" class="btn">Apple Podcasts</a>
+      <a href="#" class="btn">Spotify</a>
+      <a href="#" class="btn">YouTube</a>
+      <a href="#" class="btn">Acast &amp; more</a>
+    </div>
+  </div>
+</section>
+
+<!-- SUBSCRIBE -->
+<section class="subscribe" id="subscribe">
+  <div class="subscribe-inner">
+    <div class="subscribe-text">
+      <h2>Keep an ear to the signal.</h2>
+      <p>Occasional dispatches from Te Irirangi: launch news, behind-the-scenes, and the odd story from the pub.</p>
+    </div>
+    <form onsubmit="event.preventDefault(); alert('Form will connect to Buttondown on launch.');">
+      <input type="email" placeholder="your email" required>
+      <button type="submit" class="btn primary">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="credits">
+    <strong>Claybourne</strong> was produced by Pronoun Productions (Andrew Dubber &amp; Belinda Todd) in 1998 with the assistance of NZ On Air, and broadcast on Newstalk ZB. Written by Jim McLarty and William Davis. Winner of the New Zealand Radio Award for Best Drama, 1999.
+  </div>
+  <div class="legal">
+    © 1998 — 2026 Andrew Dubber &amp; Belinda Todd. See also: <a href="https://en.wikipedia.org/wiki/Claybourne">Wikipedia</a>
+  </div>
+</footer>
+
+</body>
+</html>
