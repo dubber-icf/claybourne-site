@@ -113,7 +113,7 @@
 
   /* Hero */
   .hero .bg {
-    background-image: url('images/claybourne_quotes_town_overview.png');
+    background-image: url('images/claybourne_quotes_town_overview.jpg');
   }
 
   .hero .bg::after {
@@ -128,21 +128,29 @@
   .hero h1 {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 400;
-    font-size: clamp(3rem, 8vw, 6.5rem);
+    font-size: clamp(2.25rem, 8vw, 6.5rem);
     letter-spacing: 0.35em;
     color: var(--cream);
     margin-bottom: 1.5rem;
     text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+    overflow-wrap: break-word;
   }
 
   .hero .tagline {
-    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    font-size: clamp(1rem, 2vw, 1.4rem);
     font-style: italic;
     font-weight: 300;
     letter-spacing: 0.05em;
     color: var(--cream-soft);
     margin-bottom: 3rem;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+  }
+
+  @media (max-width: 600px) {
+    .hero h1 { letter-spacing: 0.2em; }
+    .hero .content { padding: 1rem; }
   }
 
   .hero .cta-row {
@@ -185,7 +193,7 @@
 
   /* Greeting section */
   .greeting .bg {
-    background-image: url('images/claybourne_landscape_philosophy.png');
+    background-image: url('images/claybourne_landscape_philosophy.jpg');
   }
 
   .greeting h2 {
@@ -205,7 +213,7 @@
 
   /* Premise section */
   .premise .bg {
-    background-image: url('images/claybourne_satellite_background.png');
+    background-image: url('images/claybourne_satellite_background.jpg');
   }
 
   .premise .bg::after {
@@ -244,7 +252,7 @@
 
   /* Genre section */
   .genre .bg {
-    background-image: url('images/claybourne_sea_background.png');
+    background-image: url('images/claybourne_sea_background.jpg');
   }
 
   .genre h2 {
@@ -273,7 +281,7 @@
 
   /* Characters intro */
   .characters-intro .bg {
-    background-image: url('images/claybourne_pub_dining_background.png');
+    background-image: url('images/claybourne_pub_dining_background.jpg');
   }
 
   .characters-intro .bg::after {
@@ -376,7 +384,7 @@
   @media (max-width: 600px) {
     .char-card {
       aspect-ratio: auto;
-      overflow: visible;
+      overflow: hidden;
       background: var(--ink-soft);
     }
     .char-card img {
@@ -484,7 +492,7 @@
 
   /* Listen section */
   .listen .bg {
-    background-image: url('images/claybourne_dawn_storm.png');
+    background-image: url('images/claybourne_dawn_storm.jpg');
   }
 
   .listen .bg::after {
@@ -520,7 +528,7 @@
   /* Plain fallback (if we revert): background: var(--ink-soft); */
   .subscribe {
     position: relative;
-    background: url('images/claybourne_slide_background.png') center/cover no-repeat;
+    background: url('images/claybourne_slide_background.jpg') center/cover no-repeat;
     padding: 6rem clamp(2rem, 6vw, 6rem);
   }
 
@@ -629,8 +637,10 @@
   footer a:hover { color: var(--cream); }
 
   @media (max-width: 768px) {
-    nav { padding: 1rem 1.5rem; }
-    nav ul { display: none; }
+    nav { padding: 1rem 1rem; flex-wrap: wrap; gap: 0.5rem 1rem; }
+    nav .brand { font-size: 0.95rem; letter-spacing: 0.25em; }
+    nav ul { gap: 1rem; font-size: 0.85rem; }
+    nav a { font-size: 0.85rem; letter-spacing: 0.05em; }
     section { padding: 5rem 1.5rem; }
     .hero .cta-row { flex-direction: column; align-items: center; }
     .btn { width: 100%; max-width: 280px; text-align: center; }
@@ -711,7 +721,7 @@
     <h3>THE CHARACTERS</h3>
     <div class="char-grid">
       <div class="char-card">
-        <img src="images/01 Thompson 4-3.png" alt="Thompson">
+        <img src="images/01 Thompson 4-3.jpg" alt="Thompson" loading="lazy">
         <div class="overlay">
           <h4>THOMPSON</h4>
           <p>An American mid-level executive at a multinational communications giant. Fish out of water. Emotionally fragile, and somewhat overwhelmed at the prospect of being the 'chosen one' in an ancient Māori prophecy.</p>
@@ -719,7 +729,7 @@
       </div>
 
       <div class="char-card">
-        <img src="images/2026-04-14%20Karen.png" alt="Karen" class="zoom-in" style="object-position: left 90%;">
+        <img src="images/2026-04-14%20Karen.jpg" alt="Karen" loading="lazy" class="zoom-in" style="object-position: left 90%;">
         <div class="overlay">
           <h4>KAREN</h4>
           <p>Works at the Claybourne Hotel. Moved to town two years ago to escape an abusive husband. Kind and practical, with a good line in sarcasm. Running away and hiding, for now.</p>
@@ -727,7 +737,7 @@
       </div>
 
       <div class="char-card">
-        <img src="images/04 Mike 4-3.png" alt="Mike">
+        <img src="images/04 Mike 4-3.jpg" alt="Mike" loading="lazy">
         <div class="overlay">
           <h4>MIKE</h4>
           <p>Seventeen-year-old mechanic and aspiring rapper. A knack for being in the wrong place at exactly the right time. Carries more wisdom than the town gives him credit for.</p>
@@ -735,7 +745,7 @@
       </div>
 
       <div class="char-card">
-        <img src="images/02 Mata 4-3.png" alt="Mata">
+        <img src="images/02 Mata 4-3.jpg" alt="Mata" loading="lazy">
         <div class="overlay">
           <h4>MATA</h4>
           <p>The town's priest and spiritual leader. Carries the weight of the prophecy and the history of the land. Reads the signs. Knows more than he says.</p>
@@ -743,7 +753,7 @@
       </div>
 
       <div class="char-card">
-        <img src="images/07 Queenie 4-3.png" alt="Queenie">
+        <img src="images/07 Queenie 4-3.jpg" alt="Queenie" loading="lazy">
         <div class="overlay">
           <h4>QUEENIE</h4>
           <p>Iwi matriarch. Watches the shore. Speaks to Tangaroa. The last word on what Te Irirangi is and has always been.</p>
@@ -751,7 +761,7 @@
       </div>
 
       <div class="char-card">
-        <img src="images/05 Frank 4-3.png" alt="Frank">
+        <img src="images/05 Frank 4-3.jpg" alt="Frank" loading="lazy">
         <div class="overlay">
           <h4>FRANK</h4>
           <p>Mayor, hotelier, businessman. Has plans for the town that don't always align with what the town wants. Generous with the pour, but the drinks aren't always free.</p>
@@ -759,7 +769,7 @@
       </div>
 
       <div class="char-card">
-        <img src="images/06 Edith 4-3.png" alt="Edith">
+        <img src="images/06 Edith 4-3.jpg" alt="Edith" loading="lazy">
         <div class="overlay">
           <h4>EDITH</h4>
           <p>Shopkeeper and unofficial clearing house for everything that matters in Claybourne. Dispenses wisdom, groceries, and opinions in roughly equal measure, whether you've asked for them or not.</p>
@@ -767,7 +777,7 @@
       </div>
 
       <div class="char-card">
-        <img src="images/philip_replaced_man.png" alt="Phillip">
+        <img src="images/philip_replaced_man.jpg" alt="Phillip" loading="lazy">
         <div class="overlay">
           <h4>PHILLIP</h4>
           <p>Frank's successful son. Returned from the wider world with polish, prospects, and ideas about what Claybourne ought to become. His homecoming stirs more than it settles.</p>
@@ -775,7 +785,7 @@
       </div>
 
       <div class="char-card">
-        <img src="images/08 Clive 4-3.png" alt="Clive">
+        <img src="images/08 Clive 4-3.jpg" alt="Clive" loading="lazy">
         <div class="overlay">
           <h4>CLIVE</h4>
           <p>IT expert with a previous life he doesn't talk about and an impeccably appointed home outside town. Jazz, good coffee, and a deepening suspicion about what the satellite station is actually for.</p>
@@ -784,7 +794,7 @@
     </div>
 
     <div class="taniwha">
-      <img src="images/claybourne_taniwha_shadowy.png" alt="The Taniwha">
+      <img src="images/claybourne_taniwha_shadowy.jpg" alt="The Taniwha" loading="lazy">
       <div class="overlay">
         <h4>THE TANIWHA</h4>
         <p>Older than the town. Older than the prophecy. Not a metaphor, not a story told to children, not a tourist attraction. Something that was here before the satellites and will be here long after they fall silent.</p>
@@ -793,7 +803,7 @@
     </div>
 
     <div class="taniwha delilah">
-      <img src="images/19 Delilah 4-3.png" alt="Delilah">
+      <img src="images/19 Delilah 4-3.jpg" alt="Delilah" loading="lazy">
       <div class="overlay">
         <h4>DELILAH</h4>
         <p>The sentient AI at the heart of Koestler's Claybourne experiment. Capricious, curious, and utterly without conscience. Her personality is not what anyone designed, and the longer she listens to Claybourne, the less anyone is sure what she wants.</p>
