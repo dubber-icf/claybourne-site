@@ -322,26 +322,6 @@
 
   @media (max-width: 600px) {
     .char-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-
-    /* On mobile, stack image + description instead of overlaying text on the image */
-    .char-card {
-      aspect-ratio: auto;
-      background: var(--ink-soft);
-      border-radius: 0;
-    }
-    .char-card img {
-      aspect-ratio: 4 / 3;
-      height: auto;
-    }
-    .char-card .overlay {
-      position: static;
-      background: var(--ink-soft);
-      padding: 1.25rem 1.5rem 1.5rem;
-      display: block;
-    }
-    .char-card h4 {
-      margin-bottom: 0.65rem;
-    }
   }
 
   .char-card {
@@ -390,6 +370,30 @@
     font-size: 1.05rem;
     color: var(--text-body);
     line-height: 1.55;
+  }
+
+  /* On mobile, stack image + description instead of overlaying text on the image */
+  @media (max-width: 600px) {
+    .char-card {
+      aspect-ratio: auto;
+      overflow: visible;
+      background: var(--ink-soft);
+    }
+    .char-card img {
+      aspect-ratio: 4 / 3;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .char-card:hover img { transform: none; }
+    .char-card img.zoom-in { transform: scale(1.2); transform-origin: left bottom; }
+    .char-card .overlay {
+      position: static;
+      background: var(--ink-soft);
+      padding: 1.25rem 1.5rem 1.75rem;
+      display: block;
+    }
+    .char-card h4 { margin-bottom: 0.65rem; }
   }
 
   /* Antagonist feature panels (Taniwha, Delilah) */
