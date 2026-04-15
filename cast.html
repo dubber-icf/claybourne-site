@@ -320,10 +320,24 @@
   footer a:hover { color: var(--cream); }
 
   @media (max-width: 768px) {
-    nav { padding: 1rem 1.5rem; }
-    nav ul { display: none; }
+    nav { padding: 1rem 1rem; flex-wrap: wrap; gap: 0.5rem 1rem; }
+    nav .brand { font-size: 0.95rem; letter-spacing: 0.25em; }
+    nav ul { gap: 1rem; font-size: 0.85rem; }
+    nav a { font-size: 0.85rem; letter-spacing: 0.05em; }
     .hero-banner { padding: 6rem 1.5rem 3rem; min-height: 50vh; }
     section.block, .crew, .history { padding: 3.5rem 1.5rem; }
+  }
+
+  /* Mobile body-text bump */
+  @media (max-width: 600px) {
+    section.block .section-lead { font-size: 1.2rem; }
+    .cast-card .actor { font-size: 1.55rem; }
+    .cast-card .role { font-size: 0.95rem; }
+    .crew-item .names { font-size: 1.3rem; }
+    .crew-item .role { font-size: 0.95rem; }
+    .history p { font-size: 1.2rem; line-height: 1.75; }
+    .history .small-note { font-size: 1.1rem; }
+    footer .credits { font-size: 1.1rem; }
   }
 </style>
 </head>
