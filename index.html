@@ -128,13 +128,12 @@
   .hero h1 {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 400;
-    font-size: clamp(2.25rem, 8vw, 6.5rem);
+    font-size: clamp(2rem, 8vw, 6.5rem);
     letter-spacing: 0.35em;
     color: var(--cream);
     margin-bottom: 1.5rem;
     text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
-    max-width: 100%;
-    overflow-wrap: break-word;
+    white-space: nowrap;
   }
 
   .hero .tagline {
@@ -149,8 +148,12 @@
   }
 
   @media (max-width: 600px) {
-    .hero h1 { letter-spacing: 0.2em; }
+    .hero h1 { letter-spacing: 0.15em; font-size: clamp(1.75rem, 11vw, 3rem); }
     .hero .content { padding: 1rem; }
+  }
+
+  @media (max-width: 360px) {
+    .hero h1 { letter-spacing: 0.1em; font-size: 1.6rem; }
   }
 
   .hero .cta-row {
