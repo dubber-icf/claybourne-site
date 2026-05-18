@@ -588,6 +588,64 @@
     margin-right: auto;
   }
 
+  /* Trailer player */
+  .trailer-player {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    max-width: 560px;
+    margin: 0 auto 2.5rem;
+  }
+
+  .trailer-player .play-btn {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 1px solid var(--cream);
+    background: transparent;
+    color: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .trailer-player .play-btn:hover {
+    background: var(--cream);
+    color: var(--ink);
+  }
+
+  .trailer-player .play-btn svg { display: block; }
+
+  .trailer-player .progress {
+    flex: 1;
+    height: 2px;
+    background: rgba(234, 220, 176, 0.25);
+    cursor: pointer;
+    position: relative;
+  }
+
+  .trailer-player .progress-bar {
+    height: 100%;
+    width: 0;
+    background: var(--cream);
+    transition: width 0.1s linear;
+  }
+
+  .trailer-player .time {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    color: var(--cream-soft);
+    font-variant-numeric: tabular-nums;
+    flex-shrink: 0;
+    min-width: 6em;
+    text-align: right;
+  }
+
   .platforms {
     display: flex;
     gap: 1rem;
@@ -782,6 +840,22 @@
       Monday to Thursday. Exactly as it first aired in 1998.<br>
       Starting 1st June.
     </p>
+    <div class="trailer-player" data-trailer>
+      <button type="button" class="play-btn" aria-label="Play trailer">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          <path class="play-icon" d="M8 5v14l11-7z" fill="currentColor"/>
+          <g class="pause-icon" fill="currentColor" hidden>
+            <rect x="6" y="5" width="4" height="14"/>
+            <rect x="14" y="5" width="4" height="14"/>
+          </g>
+        </svg>
+      </button>
+      <div class="progress" role="progressbar" aria-label="Trailer progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="progress-bar"></div>
+      </div>
+      <span class="time">0:00 / 5:50</span>
+      <audio preload="metadata" src="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/6a079877a8fad4c1be494d9f/media.mp3"></audio>
+    </div>
     <div class="platforms">
       <a href="https://podcasts.apple.com/us/podcast/claybourne/id1896698794" class="btn" target="_blank" rel="noopener">Apple Podcasts</a>
       <a href="https://open.spotify.com/show/033hmC8I5B3Q4ZSR1jmenZ" class="btn" target="_blank" rel="noopener">Spotify</a>
@@ -982,6 +1056,59 @@
         setTimeout(function() { scrollToHash(location.hash, false); }, 200);
       });
     }
+  })();
+
+  // Trailer player
+  (function() {
+    var root = document.querySelector('[data-trailer]');
+    if (!root) return;
+    var audio = root.querySelector('audio');
+    var btn = root.querySelector('.play-btn');
+    var progress = root.querySelector('.progress');
+    var bar = root.querySelector('.progress-bar');
+    var timeEl = root.querySelector('.time');
+    var playIcon = root.querySelector('.play-icon');
+    var pauseIcon = root.querySelector('.pause-icon');
+
+    function fmt(s) {
+      if (!isFinite(s) || s < 0) s = 0;
+      s = Math.floor(s);
+      return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0');
+    }
+    function render() {
+      var d = audio.duration;
+      if (d && isFinite(d)) {
+        var pct = (audio.currentTime / d) * 100;
+        bar.style.width = pct + '%';
+        progress.setAttribute('aria-valuenow', Math.round(pct));
+      }
+      timeEl.textContent = fmt(audio.currentTime) + ' / ' + fmt(audio.duration || 350);
+    }
+    btn.addEventListener('click', function() {
+      if (audio.paused) audio.play(); else audio.pause();
+    });
+    audio.addEventListener('play', function() {
+      btn.setAttribute('aria-label', 'Pause trailer');
+      playIcon.setAttribute('hidden', '');
+      pauseIcon.removeAttribute('hidden');
+    });
+    audio.addEventListener('pause', function() {
+      btn.setAttribute('aria-label', 'Play trailer');
+      pauseIcon.setAttribute('hidden', '');
+      playIcon.removeAttribute('hidden');
+    });
+    audio.addEventListener('timeupdate', render);
+    audio.addEventListener('loadedmetadata', render);
+    audio.addEventListener('ended', function() {
+      audio.currentTime = 0;
+      render();
+    });
+    progress.addEventListener('click', function(e) {
+      var rect = progress.getBoundingClientRect();
+      var frac = (e.clientX - rect.left) / rect.width;
+      if (audio.duration) audio.currentTime = audio.duration * Math.max(0, Math.min(1, frac));
+    });
+    render();
   })();
 </script>
 
