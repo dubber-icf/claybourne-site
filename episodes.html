@@ -1645,6 +1645,7 @@
     var pendingSeek = null;
     var dragging = false;
     var finished = false;
+    var wantPlay = false;
     var lastSave = 0;
     var announced = -1;
     var heard = [];
@@ -1760,7 +1761,9 @@
       }
       btnPlay.setAttribute('aria-label', playing ? 'Pause' : 'Play');
       for (var k = 0; k < eps.length; k++) {
-        eps[k].el.classList.toggle('is-playing', playing && k === idx);
+        var on = playing && k === idx;
+        eps[k].el.classList.toggle('is-playing', on);
+        eps[k].link.setAttribute('aria-label', (on ? 'Pause ' : 'Play ') + label(eps[k]));
       }
     }
 
@@ -1838,6 +1841,7 @@
     /* ---------- audio events ---------- */
     audio.addEventListener('play', function() {
       finished = false;
+      wantPlay = true;
       if (idx >= 0) {
         setHash(idx);
         if (announced !== idx) {
@@ -1849,6 +1853,9 @@
     });
 
     audio.addEventListener('pause', function() {
+      // A pause fired because the file ran out is not the listener pausing.
+      var atEnd = audio.ended || (isFinite(audio.duration) && audio.duration > 0 && audio.currentTime >= audio.duration - 0.25);
+      if (!atEnd) wantPlay = false;
       save();
       syncPlayUI();
     });
@@ -1862,7 +1869,10 @@
       if (pendingSeek !== null) {
         var t = pendingSeek;
         pendingSeek = null;
-        if (isFinite(audio.duration) && t < audio.duration - 1) {
+        if (isFinite(audio.duration) && audio.duration > 0) {
+          t = Math.min(t, Math.max(0, audio.duration - 0.5));
+        }
+        if (t > 0) {
           try { audio.currentTime = t; } catch (e) {}
         }
       }
@@ -1872,11 +1882,18 @@
     audio.addEventListener('durationchange', render);
 
     audio.addEventListener('ended', function() {
+      if (!wantPlay) {
+        // Reached the end by dragging the scrubber while paused: stay put.
+        syncPlayUI();
+        render();
+        return;
+      }
       finished = true;
       markHeard(idx);
       if (idx < eps.length - 1) {
         playIndex(idx + 1, 0);
       } else {
+        wantPlay = false;
         storeRemove(PROGRESS_KEY);
         updateResumeLabel();
         syncPlayUI();
@@ -1980,7 +1997,8 @@
 
     var startHash = hashIndex();
     if (startHash >= 0) {
-      cue(startHash);
+      var sp = savedProgress();
+      cue(startHash, (sp && sp.k === startHash) ? sp.t : 0);
       scrollToRow(startHash);
       window.addEventListener('load', function() { scrollToRow(startHash); });
     } else {

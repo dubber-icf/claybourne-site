@@ -1127,6 +1127,18 @@
         cta.textContent = 'Continue with Episode 2';
         cta.setAttribute('href', 'episodes.html#episode-2');
       }
+      // Tell the episodes page that Episode 1 has been heard (same keys it uses).
+      try {
+        var heard = JSON.parse(localStorage.getItem('claybourne.heard') || '[]');
+        if (!Array.isArray(heard)) heard = [];
+        if (heard.indexOf(1) === -1) {
+          heard.push(1);
+          localStorage.setItem('claybourne.heard', JSON.stringify(heard));
+        }
+        if (!localStorage.getItem('claybourne.progress')) {
+          localStorage.setItem('claybourne.progress', JSON.stringify({ ep: 2, t: 0 }));
+        }
+      } catch (e) {}
     });
     progress.addEventListener('click', function(e) {
       var rect = progress.getBoundingClientRect();
