@@ -1,6 +1,6 @@
 # Claybourne
 
-Website for the relaunch of *Claybourne*, the award-winning 1998 New Zealand radio drama, as a podcast.
+Website for *Claybourne*, the award-winning 1998 New Zealand radio drama, re-released as a podcast in 2026. All 96 episodes are out and can be played in order on the site.
 
 ## About
 
@@ -12,8 +12,11 @@ The original radio series was produced by Pronoun Productions (Andrew Dubber & B
 
 A static site built in plain HTML and CSS, using Cormorant Garamond (Google Fonts) and atmospheric imagery drawn from the series bible. Deployed to Vercel.
 
-- `index.html` — landing page: hero, story, characters, Taniwha and Delilah feature panels, listen, subscribe
-- `cast.html` — cast and crew, with a short historical note
+- `index.html`: landing page: hero, story, characters, Taniwha and Delilah feature panels, listen, subscribe
+- `cast.html`: cast and crew, with a short historical note
+- `episodes.html`: the complete series: all 96 episodes in order, with a player that carries on from one to the next and keeps your place
+- `tools/build_episodes.py`: regenerates the episode list in `episodes.html` from the podcast feed (not deployed)
+- `sitemap.xml`, `robots.txt`
 - `images/` — character portraits, mood artwork, and background images
 
 ## Local preview

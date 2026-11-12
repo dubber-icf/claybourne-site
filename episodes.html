@@ -1,0 +1,1994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claybourne: The Complete Series</title>
+<meta name="description" content="All 96 episodes of Claybourne, the award-winning 1998 New Zealand audio drama, in order and ready to play. A little over nine hours, start to finish.">
+
+<link rel="canonical" href="https://claybourne.nz/episodes.html">
+<meta property="og:url" content="https://claybourne.nz/episodes.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Claybourne: The Complete Series">
+<meta property="og:description" content="All 96 episodes of Claybourne, the award-winning 1998 New Zealand audio drama, in order and ready to play. A little over nine hours, start to finish.">
+<meta property="og:image" content="https://claybourne.nz/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Claybourne, a coastal New Zealand town at dusk, misty and overcast.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://claybourne.nz/images/og-image.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --cream: #EADCB0;
+    --cream-soft: #D9CDA8;
+    --gold: #C9B77A;
+    --text-light: #F1E8CE;
+    --text-body: rgba(241, 232, 206, 0.85);
+    --text-dim: rgba(241, 232, 206, 0.65);
+    --ink: #0C100E;
+    --ink-soft: #151C18;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+  }
+
+  body {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-weight: 300;
+    color: var(--text-light);
+    background: var(--ink);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  body.has-player { padding-bottom: calc(6rem + env(safe-area-inset-bottom)); }
+
+  :focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* Navigation */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 1.5rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(12, 16, 14, 0.6), transparent);
+    backdrop-filter: blur(4px);
+  }
+
+  nav .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    letter-spacing: 0.3em;
+    color: var(--cream);
+    text-decoration: none;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  nav a {
+    color: var(--text-body);
+    text-decoration: none;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    transition: color 0.3s;
+  }
+
+  nav a:hover,
+  nav a.active { color: var(--cream); }
+
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--cream);
+    border: 1px solid var(--cream);
+    background: transparent;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background: var(--cream);
+    color: var(--ink);
+  }
+
+  .btn.primary {
+    background: var(--cream);
+    color: var(--ink);
+  }
+
+  .btn.primary:hover {
+    background: var(--text-light);
+  }
+
+  /* Header banner */
+  .hero-banner {
+    position: relative;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 2rem 4rem;
+    overflow: hidden;
+  }
+
+  .hero-banner .bg {
+    position: absolute;
+    inset: 0;
+    background: url('images/claybourne_dawn_storm.jpg') center/cover no-repeat;
+    z-index: 0;
+  }
+
+  .hero-banner .bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(8, 12, 10, 0.6) 0%,
+      rgba(8, 12, 10, 0.45) 40%,
+      rgba(8, 12, 10, 0.8) 100%
+    );
+  }
+
+  .hero-banner .content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 900px;
+  }
+
+  .hero-banner h1 {
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    color: var(--cream);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    overflow-wrap: break-word;
+  }
+
+  .hero-banner .subtitle {
+    font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+    font-style: italic;
+    color: var(--cream-soft);
+    letter-spacing: 0.05em;
+    max-width: 700px;
+    margin: 0 auto 1rem;
+    line-height: 1.6;
+  }
+
+  .hero-banner .resume-wrap { margin-top: 2rem; }
+
+  #resume-btn { max-width: 100%; }
+
+  .hero-banner .store-note {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    color: var(--text-dim);
+  }
+
+  /* Episode list */
+  main {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 3rem;
+  }
+
+  .week { margin-bottom: 3rem; }
+
+  .week-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.25rem 1.5rem;
+    flex-wrap: wrap;
+    padding: 0 0.5rem 0.75rem;
+    border-bottom: 1px solid rgba(241, 232, 206, 0.25);
+  }
+
+  .week-head h2 {
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .week-meta {
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+  }
+
+  .ep-list { list-style: none; }
+
+  .ep {
+    border-bottom: 1px solid rgba(241, 232, 206, 0.12);
+    border-left: 2px solid transparent;
+    scroll-margin-top: 8rem;
+  }
+
+  .ep-play {
+    display: grid;
+    grid-template-columns: 2.75rem minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: 0.5rem;
+    min-height: 56px;
+    padding: 0.7rem 0.5rem;
+    color: inherit;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+
+  .ep-play:hover { background: rgba(241, 232, 206, 0.06); }
+
+  .ep-play:focus-visible { outline-offset: -2px; }
+
+  .ep-num,
+  .ep-dur {
+    font-size: 1.1rem;
+    color: var(--text-dim);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.05em;
+  }
+
+  .ep-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--cream);
+    overflow-wrap: break-word;
+  }
+
+  .ep-dur { text-align: right; padding-left: 0.75rem; }
+
+  .ep-syn { padding: 0 0.5rem 0 3.25rem; }
+
+  .ep-syn summary {
+    display: inline-block;
+    padding: 0.55rem 0;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .ep-syn summary::-webkit-details-marker { display: none; }
+
+  .ep-syn summary:hover { color: var(--cream); }
+
+  .ep-syn[open] summary { color: var(--cream-soft); }
+
+  .ep-syn p {
+    max-width: 60ch;
+    padding-bottom: 1rem;
+    font-size: 1.15rem;
+    line-height: 1.65;
+    color: var(--text-body);
+  }
+
+  /* Row states */
+  .ep.is-current {
+    border-left-color: var(--cream);
+    background: rgba(241, 232, 206, 0.04);
+  }
+
+  .ep.is-current .ep-num { color: var(--cream); }
+
+  .ep.is-heard .ep-title { color: var(--text-body); }
+
+  .ep.is-heard .ep-title::after,
+  .ep.is-playing .ep-title::after {
+    margin-left: 0.8rem;
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  .ep.is-heard .ep-title::after { content: 'Heard'; }
+
+  .ep.is-playing .ep-title::after { content: 'Playing'; color: var(--gold); }
+
+  /* Closing block */
+  .closing {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+    text-align: center;
+    border-top: 1px solid rgba(241, 232, 206, 0.12);
+  }
+
+  .closing h2 {
+    font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    color: var(--cream);
+  }
+
+  .platforms {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--ink);
+    padding: 3rem 2rem 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(241, 232, 206, 0.1);
+  }
+
+  footer .credits {
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.05rem;
+    color: var(--text-body);
+    line-height: 1.7;
+  }
+
+  footer .credits strong {
+    color: var(--cream);
+    font-weight: 500;
+  }
+
+  footer .legal {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+  }
+
+  footer a {
+    color: var(--cream-soft);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(201, 183, 122, 0.3);
+  }
+
+  footer a:hover { color: var(--cream); }
+
+  /* Player bar */
+  .player {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 90;
+    background: var(--ink-soft);
+    border-top: 1px solid rgba(241, 232, 206, 0.25);
+    padding: 0.6rem 1.5rem calc(0.6rem + env(safe-area-inset-bottom));
+  }
+
+  .player[hidden] { display: none; }
+  /* The hidden attribute has no default effect on SVG children. */
+  .player svg [hidden] { display: none; }
+
+  .p-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem 1.5rem;
+  }
+
+  .p-ctrl {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    flex-shrink: 0;
+  }
+
+  .p-btn {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .p-btn:hover { background: rgba(241, 232, 206, 0.12); }
+
+  .p-btn:disabled { opacity: 0.35; cursor: default; background: transparent; }
+
+  .p-btn svg { display: block; }
+
+  .p-btn.p-play {
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--cream);
+  }
+
+  .p-btn.p-play:hover { background: var(--cream); color: var(--ink); }
+
+  .p-now {
+    flex: 1;
+    min-width: 0;
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--cream);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .p-scrub {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 0 1 44%;
+    min-width: 0;
+  }
+
+  .p-time {
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    color: var(--cream-soft);
+    font-variant-numeric: tabular-nums;
+    flex-shrink: 0;
+    min-width: 6.5em;
+    text-align: right;
+  }
+
+  .p-range {
+    --pct: 0%;
+    flex: 1;
+    min-width: 0;
+    height: 44px;
+    margin: 0;
+    background: transparent;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .p-range::-webkit-slider-runnable-track {
+    height: 2px;
+    background: linear-gradient(to right, var(--cream) var(--pct), rgba(234, 220, 176, 0.25) var(--pct));
+  }
+
+  .p-range::-moz-range-track {
+    height: 2px;
+    background: linear-gradient(to right, var(--cream) var(--pct), rgba(234, 220, 176, 0.25) var(--pct));
+  }
+
+  .p-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    margin-top: -6px;
+    border-radius: 50%;
+    border: 0;
+    background: var(--cream);
+  }
+
+  .p-range::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 0;
+    background: var(--cream);
+  }
+
+  @media (max-width: 1000px) {
+    nav { flex-wrap: wrap; gap: 0.5rem 1rem; }
+    nav ul { flex-wrap: wrap; gap: 0.25rem 1.5rem; }
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1rem; }
+    nav .brand { font-size: 0.95rem; letter-spacing: 0.25em; }
+    nav ul { gap: 0.25rem 1rem; font-size: 0.85rem; }
+    nav a { font-size: 0.85rem; letter-spacing: 0.05em; }
+    .hero-banner { padding: 9rem 1.5rem 3rem; min-height: 40vh; }
+    .btn { width: 100%; max-width: 280px; text-align: center; }
+    #resume-btn { max-width: 100%; padding: 0.9rem 1.25rem; }
+    main { padding: 3rem 1rem 2rem; }
+    .closing { padding: 2.5rem 1.5rem 4rem; }
+    .week-head { flex-direction: column; gap: 0.25rem; }
+    body.has-player { padding-bottom: calc(9rem + env(safe-area-inset-bottom)); }
+    .player { padding: 0.4rem 1rem calc(0.4rem + env(safe-area-inset-bottom)); }
+    .p-inner { flex-wrap: wrap; gap: 0 0.75rem; }
+    .p-now { font-size: 1.1rem; }
+    .p-scrub { flex: 1 1 100%; order: 3; gap: 0.75rem; }
+    .p-time { font-size: 0.95rem; min-width: 6em; }
+  }
+
+  @media (max-width: 600px) {
+    .ep-title { font-size: 1.4rem; }
+    .ep-syn p { font-size: 1.2rem; }
+    footer .credits { font-size: 1.1rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="brand">CLAYBOURNE</a>
+  <ul>
+    <li><a href="index.html#premise">The Story</a></li>
+    <li><a href="index.html#characters">Characters</a></li>
+    <li><a href="cast.html">Cast &amp; Crew</a></li>
+    <li><a href="episodes.html" class="active">Episodes</a></li>
+    <li><a href="index.html#listen">Listen</a></li>
+    <li><a href="https://claybournepodcast.substack.com" target="_blank" rel="noopener">Discuss</a></li>
+  </ul>
+</nav>
+
+<!-- HEADER -->
+<header class="hero-banner">
+  <div class="bg"></div>
+  <div class="content">
+    <h1>THE COMPLETE SERIES</h1>
+    <p class="subtitle">Ninety-six episodes, in order, from Arrival to Company Calls. Press play and each one follows the last.</p>
+    <p class="subtitle">Claybourne first went out four afternoons a week for twenty-four weeks in 1998. The episodes are laid out here the same way.</p>
+    <div class="resume-wrap">
+      <button type="button" class="btn primary" id="resume-btn">Start at Episode 1</button>
+      <p class="store-note" id="store-note" hidden>Your place is kept on this device.</p>
+    </div>
+  </div>
+</header>
+
+<main id="episodes">
+<!-- EPISODES:START -->
+<section class="week" id="week-1" aria-labelledby="week-1-h">
+  <header class="week-head">
+    <h2 id="week-1-h">Week 1</h2>
+    <p class="week-meta">Episodes 1 to 4 &middot; 24 min</p>
+  </header>
+  <ol class="ep-list" start="1">
+    <li class="ep" id="episode-1" data-ep="1" data-title="Arrival" data-dur="371">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2be12abe143da5b65013a/media.mp3" aria-label="Play Episode 1: Arrival">
+        <span class="ep-num">1</span>
+        <span class="ep-title">Arrival</span>
+        <span class="ep-dur">6:11</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>An American on holiday receives a fax from his employers about a &quot;problem&quot; at a remote satellite station in New Zealand&#x27;s far north. Thompson drives into the coastal town of Te Irirangi expecting a routine fix. The town has other plans.</p></details>
+    </li>
+    <li class="ep" id="episode-2" data-ep="2" data-title="Warning" data-dur="338">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2bf35c8a506316db82011/media.mp3" aria-label="Play Episode 2: Warning">
+        <span class="ep-num">2</span>
+        <span class="ep-title">Warning</span>
+        <span class="ep-dur">5:38</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>The locals seem friendly enough, but Mata, the town&#x27;s priest, has a quiet word with the newcomer. Something in Te Irirangi doesn&#x27;t want Thompson here, and something else very much does.</p></details>
+    </li>
+    <li class="ep" id="episode-3" data-ep="3" data-title="Car Trouble" data-dur="344">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2bf760b4baf3bf269eda4/media.mp3" aria-label="Play Episode 3: Car Trouble">
+        <span class="ep-num">3</span>
+        <span class="ep-title">Car Trouble</span>
+        <span class="ep-dur">5:44</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Thompson&#x27;s rental breaks down on a back road, and a seventeen-year-old mechanic named Mike is the only help for miles. In a town with a satellite station on the hill and no mobile signal, isolation takes on a new meaning.</p></details>
+    </li>
+    <li class="ep" id="episode-4" data-ep="4" data-title="Dead Body" data-dur="379">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2bfb2289eeb2c7b54be87/media.mp3" aria-label="Play Episode 4: Dead Body">
+        <span class="ep-num">4</span>
+        <span class="ep-title">Dead Body</span>
+        <span class="ep-dur">6:19</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Karen finds a body washed up on the beach below the satellite station. The town&#x27;s morning routine shatters. Thompson is beginning to suspect that the &quot;problem&quot; Koestler Industries sent him to fix is considerably worse than a faulty dish.</p></details>
+    </li>
+  </ol>
+</section>
+<section class="week" id="week-2" aria-labelledby="week-2-h">
+  <header class="week-head">
+    <h2 id="week-2-h">Week 2</h2>
+    <p class="week-meta">Episodes 5 to 8 &middot; 25 min</p>
+  </header>
+  <ol class="ep-list" start="5">
+    <li class="ep" id="episode-5" data-ep="5" data-title="Identified" data-dur="341">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2bfe90b4baf3bf26a0846/media.mp3" aria-label="Play Episode 5: Identified">
+        <span class="ep-num">5</span>
+        <span class="ep-title">Identified</span>
+        <span class="ep-dur">5:41</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>The dead woman has a name, a history, and a connection to the satellite station that nobody at Koestler wants to talk about. Thompson starts asking questions. The answers don&#x27;t match.</p></details>
+    </li>
+    <li class="ep" id="episode-6" data-ep="6" data-title="Recognition" data-dur="372">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c021abe143da5b666c89/media.mp3" aria-label="Play Episode 6: Recognition">
+        <span class="ep-num">6</span>
+        <span class="ep-title">Recognition</span>
+        <span class="ep-dur">6:12</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Mata sees something in the stranger that the prophecy foretold. Queenie, the iwi matriarch, watches from the shore. Recognition is not always a welcome thing.</p></details>
+    </li>
+    <li class="ep" id="episode-7" data-ep="7" data-title="Interrogated" data-dur="391">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c0596e5b90839a26ff31/media.mp3" aria-label="Play Episode 7: Interrogated">
+        <span class="ep-num">7</span>
+        <span class="ep-title">Interrogated</span>
+        <span class="ep-dur">6:31</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Constable Bigby arrives from Kawakawa to ask questions about the body on the beach. His investigation is thorough in some places and conspicuously shallow in others. Someone in town is already managing the narrative.</p></details>
+    </li>
+    <li class="ep" id="episode-8" data-ep="8" data-title="Electricity" data-dur="393">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c09723929c3a2a64ff7a/media.mp3" aria-label="Play Episode 8: Electricity">
+        <span class="ep-num">8</span>
+        <span class="ep-title">Electricity</span>
+        <span class="ep-dur">6:33</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>The satellite station&#x27;s power fluctuates in ways the manual doesn&#x27;t cover. Lights flicker in the hotel. Somewhere in the circuitry, something is listening, learning, and beginning to play.</p></details>
+    </li>
+  </ol>
+</section>
+<section class="week" id="week-3" aria-labelledby="week-3-h">
+  <header class="week-head">
+    <h2 id="week-3-h">Week 3</h2>
+    <p class="week-meta">Episodes 9 to 12 &middot; 25 min</p>
+  </header>
+  <ol class="ep-list" start="9">
+    <li class="ep" id="episode-9" data-ep="9" data-title="Morgue" data-dur="362">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c0cec8a506316db897c8/media.mp3" aria-label="Play Episode 9: Morgue">
+        <span class="ep-num">9</span>
+        <span class="ep-title">Morgue</span>
+        <span class="ep-dur">6:02</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>A trip to the morgue raises more questions than it settles. The cause of death doesn&#x27;t quite fit, and the dead woman&#x27;s personal effects tell a story her employers would prefer stayed buried.</p></details>
+    </li>
+    <li class="ep" id="episode-10" data-ep="10" data-title="Domestic Violence" data-dur="371">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c109d2febdbec9cd770c/media.mp3" aria-label="Play Episode 10: Domestic Violence">
+        <span class="ep-num">10</span>
+        <span class="ep-title">Domestic Violence</span>
+        <span class="ep-dur">6:11</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Karen&#x27;s past catches a signal through the static. A phone call from the life she fled reminds her that distance is not the same as safety. In a town this small, secrets travel at the speed of gossip.</p></details>
+    </li>
+    <li class="ep" id="episode-11" data-ep="11" data-title="Prank Call" data-dur="352">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c141d2febdbec9cd8172/media.mp3" aria-label="Play Episode 11: Prank Call">
+        <span class="ep-num">11</span>
+        <span class="ep-title">Prank Call</span>
+        <span class="ep-dur">5:52</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Someone is making phone calls in voices that don&#x27;t belong to them. Edith&#x27;s shop becomes a clearing house for confusion and suspicion. The town DJ muses on the nature of trust over the airwaves.</p></details>
+    </li>
+    <li class="ep" id="episode-12" data-ep="12" data-title="Natural Causes" data-dur="406">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c17fabe143da5b66bab8/media.mp3" aria-label="Play Episode 12: Natural Causes">
+        <span class="ep-num">12</span>
+        <span class="ep-title">Natural Causes</span>
+        <span class="ep-dur">6:46</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Bigby is keen to close the case. Natural causes would save everyone a lot of paperwork and a lot of trouble. Not everyone is convinced, and the evidence has a habit of rearranging itself.</p></details>
+    </li>
+  </ol>
+</section>
+<section class="week" id="week-4" aria-labelledby="week-4-h">
+  <header class="week-head">
+    <h2 id="week-4-h">Week 4</h2>
+    <p class="week-meta">Episodes 13 to 16 &middot; 25 min</p>
+  </header>
+  <ol class="ep-list" start="13">
+    <li class="ep" id="episode-13" data-ep="13" data-title="Falling Out" data-dur="376">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c1b8c8a506316db8c9d4/media.mp3" aria-label="Play Episode 13: Falling Out">
+        <span class="ep-num">13</span>
+        <span class="ep-title">Falling Out</span>
+        <span class="ep-dur">6:16</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Alliances in Te Irirangi shift like the tide. Old resentments surface between Frank and Mata over land, legacy, and who gets to decide what Claybourne becomes. Thompson finds himself caught in the middle of a fight that started long before he arrived.</p></details>
+    </li>
+    <li class="ep" id="episode-14" data-ep="14" data-title="Radio" data-dur="398">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c1f0abe143da5b66d184/media.mp3" aria-label="Play Episode 14: Radio">
+        <span class="ep-num">14</span>
+        <span class="ep-title">Radio</span>
+        <span class="ep-dur">6:38</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>The DJ&#x27;s monologue drifts closer to the personal than local radio ought to allow. The voice on Tai Tokerau FM seems to know things it shouldn&#x27;t. Nobody in town seems to notice, or perhaps they&#x27;ve simply stopped listening.</p></details>
+    </li>
+    <li class="ep" id="episode-15" data-ep="15" data-title="Alliance" data-dur="349">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c227d2febdbec9cdadf9/media.mp3" aria-label="Play Episode 15: Alliance">
+        <span class="ep-num">15</span>
+        <span class="ep-title">Alliance</span>
+        <span class="ep-dur">5:49</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Strange times make for strange bedfellows. Two people in town who have every reason to distrust each other find common ground in a shared suspicion. Up at the station, the equipment hums with purpose.</p></details>
+    </li>
+    <li class="ep" id="episode-16" data-ep="16" data-title="Coin Trick" data-dur="403">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c2616e5b90839a27c7e9/media.mp3" aria-label="Play Episode 16: Coin Trick">
+        <span class="ep-num">16</span>
+        <span class="ep-title">Coin Trick</span>
+        <span class="ep-dur">6:43</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Mike has a trick he likes to show people, and a knack for being in the wrong place at exactly the right time. A small act of sleight-of-hand reveals something larger. Not everything in Claybourne is what it appears to be.</p></details>
+    </li>
+  </ol>
+</section>
+<section class="week" id="week-5" aria-labelledby="week-5-h">
+  <header class="week-head">
+    <h2 id="week-5-h">Week 5</h2>
+    <p class="week-meta">Episodes 17 to 20 &middot; 23 min</p>
+  </header>
+  <ol class="ep-list" start="17">
+    <li class="ep" id="episode-17" data-ep="17" data-title="Car Accident" data-dur="322">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c29ac8a506316db90439/media.mp3" aria-label="Play Episode 17: Car Accident">
+        <span class="ep-num">17</span>
+        <span class="ep-title">Car Accident</span>
+        <span class="ep-dur">5:22</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>The road between Claybourne and Kawakawa is winding, poorly lit, and not always empty. An accident on the coast road changes the stakes. Someone&#x27;s injuries are more than physical.</p></details>
+    </li>
+    <li class="ep" id="episode-18" data-ep="18" data-title="Conflict" data-dur="352">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c2d1abe143da5b67483d/media.mp3" aria-label="Play Episode 18: Conflict">
+        <span class="ep-num">18</span>
+        <span class="ep-title">Conflict</span>
+        <span class="ep-dur">5:52</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Tensions that have been simmering boil over at the hotel pub. Frank&#x27;s plans for the town collide with Mata&#x27;s sense of what the land demands. Thompson discovers that neutrality is not an option in Te Irirangi.</p></details>
+    </li>
+    <li class="ep" id="episode-19" data-ep="19" data-title="Bad Call" data-dur="371">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c30f6e5b90839a27f774/media.mp3" aria-label="Play Episode 19: Bad Call">
+        <span class="ep-num">19</span>
+        <span class="ep-title">Bad Call</span>
+        <span class="ep-dur">6:11</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>A decision made in haste has consequences that ripple outward. Someone trusted the wrong person with the wrong information. In a town where the phones can&#x27;t always be trusted, a bad call can mean more than one thing.</p></details>
+    </li>
+    <li class="ep" id="episode-20" data-ep="20" data-title="Advice" data-dur="342">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c347c8a506316db976d0/media.mp3" aria-label="Play Episode 20: Advice">
+        <span class="ep-num">20</span>
+        <span class="ep-title">Advice</span>
+        <span class="ep-dur">5:42</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Edith dispenses wisdom from behind the counter whether you&#x27;ve asked for it or not. Mata seeks counsel from Queenie at the water&#x27;s edge. Thompson phones LA again, and the distance between him and his old life grows wider.</p></details>
+    </li>
+  </ol>
+</section>
+<section class="week" id="week-6" aria-labelledby="week-6-h">
+  <header class="week-head">
+    <h2 id="week-6-h">Week 6</h2>
+    <p class="week-meta">Episodes 21 to 24 &middot; 20 min</p>
+  </header>
+  <ol class="ep-list" start="21">
+    <li class="ep" id="episode-21" data-ep="21" data-title="Bio Weapons" data-dur="302">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c37d23929c3a2a65e4b7/media.mp3" aria-label="Play Episode 21: Bio Weapons">
+        <span class="ep-num">21</span>
+        <span class="ep-title">Bio Weapons</span>
+        <span class="ep-dur">5:02</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>A classified document surfaces that connects the satellite station to something far larger and far darker than telecommunications. The word &quot;Koestler&quot; starts to taste different in Thompson&#x27;s mouth.</p></details>
+    </li>
+    <li class="ep" id="episode-22" data-ep="22" data-title="Family" data-dur="324">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c3bbabe143da5b67cc45/media.mp3" aria-label="Play Episode 22: Family">
+        <span class="ep-num">22</span>
+        <span class="ep-title">Family</span>
+        <span class="ep-dur">5:24</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Mike, Mata, and Queenie sit together, and the weight of whakapapa, obligation, and love fills the room. Across town, Frank pours a drink alone. Family is the thing you can&#x27;t troubleshoot.</p></details>
+    </li>
+    <li class="ep" id="episode-23" data-ep="23" data-title="The Welcoming" data-dur="299">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c3f20b4baf3bf26b7e85/media.mp3" aria-label="Play Episode 23: The Welcoming">
+        <span class="ep-num">23</span>
+        <span class="ep-title">The Welcoming</span>
+        <span class="ep-dur">4:59</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Queenie organises a powhiri for the stranger. Thompson stands on the marae atea, uncertain of the protocol but certain that something profound is happening. The ceremony is beautiful, ancient, and possibly binding.</p></details>
+    </li>
+    <li class="ep" id="episode-24" data-ep="24" data-title="Reconciliation" data-dur="292">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c42923929c3a2a660a30/media.mp3" aria-label="Play Episode 24: Reconciliation">
+        <span class="ep-num">24</span>
+        <span class="ep-title">Reconciliation</span>
+        <span class="ep-dur">4:52</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Two people in Claybourne attempt to repair what has been broken between them. Forgiveness comes easier to some than others. The land remembers what people try to forget.</p></details>
+    </li>
+  </ol>
+</section>
+<section class="week" id="week-7" aria-labelledby="week-7-h">
+  <header class="week-head">
+    <h2 id="week-7-h">Week 7</h2>
+    <p class="week-meta">Episodes 25 to 28 &middot; 21 min</p>
+  </header>
+  <ol class="ep-list" start="25">
+    <li class="ep" id="episode-25" data-ep="25" data-title="Returning" data-dur="278">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c461c8a506316db9c69d/media.mp3" aria-label="Play Episode 25: Returning">
+        <span class="ep-num">25</span>
+        <span class="ep-title">Returning</span>
+        <span class="ep-dur">4:38</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Someone comes back to Te Irirangi who hasn&#x27;t been seen in a while. Their return stirs old memories and fresh anxieties. The town is small enough that every arrival is an event and every absence is noticed.</p></details>
+    </li>
+    <li class="ep" id="episode-26" data-ep="26" data-title="Detour" data-dur="311">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c498abe143da5b6804e4/media.mp3" aria-label="Play Episode 26: Detour">
+        <span class="ep-num">26</span>
+        <span class="ep-title">Detour</span>
+        <span class="ep-dur">5:11</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>A journey that should have been straightforward takes an unexpected turn into the bush. The forest around Claybourne is dense, old, and not entirely indifferent to the people who walk through it.</p></details>
+    </li>
+    <li class="ep" id="episode-27" data-ep="27" data-title="Eeling" data-dur="322">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c4d3289eeb2c7b5676e6/media.mp3" aria-label="Play Episode 27: Eeling">
+        <span class="ep-num">27</span>
+        <span class="ep-title">Eeling</span>
+        <span class="ep-dur">5:22</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Mata takes Thompson eeling in the creek, a lesson in patience, tradition, and reading the water. Beneath the calm surface, something ancient stirs. The eels know things.</p></details>
+    </li>
+    <li class="ep" id="episode-28" data-ep="28" data-title="Earthquake" data-dur="344">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c50bd2febdbec9ce50cc/media.mp3" aria-label="Play Episode 28: Earthquake">
+        <span class="ep-num">28</span>
+        <span class="ep-title">Earthquake</span>
+        <span class="ep-dur">5:44</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>The ground shakes. Bottles fall from Edith&#x27;s shelves. The satellite station&#x27;s instruments spike. In a region not known for seismic activity, the tremor raises questions that geology alone can&#x27;t answer.</p></details>
+    </li>
+  </ol>
+</section>
+<section class="week" id="week-8" aria-labelledby="week-8-h">
+  <header class="week-head">
+    <h2 id="week-8-h">Week 8</h2>
+    <p class="week-meta">Episodes 29 to 32 &middot; 23 min</p>
+  </header>
+  <ol class="ep-list" start="29">
+    <li class="ep" id="episode-29" data-ep="29" data-title="Not An Earthquake" data-dur="322">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c543289eeb2c7b568b2c/media.mp3" aria-label="Play Episode 29: Not An Earthquake">
+        <span class="ep-num">29</span>
+        <span class="ep-title">Not An Earthquake</span>
+        <span class="ep-dur">5:22</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Whatever shook Te Irirangi, it wasn&#x27;t tectonic. Mata knows what it was, and the knowledge sits heavily on him. The cave near the beach is more restless than it has been in a very long time.</p></details>
+    </li>
+    <li class="ep" id="episode-30" data-ep="30" data-title="Son of a Warrior" data-dur="329">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c57b0b4baf3bf26c20db/media.mp3" aria-label="Play Episode 30: Son of a Warrior">
+        <span class="ep-num">30</span>
+        <span class="ep-title">Son of a Warrior</span>
+        <span class="ep-dur">5:29</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>The prophecy speaks of a son of a warrior. Mata considers what that means, and who it might be. Thompson is learning te reo phrases from Mike, unaware of how close the ancient words sit to his own story.</p></details>
+    </li>
+    <li class="ep" id="episode-31" data-ep="31" data-title="Elle McPherson" data-dur="344">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c5b8289eeb2c7b56a2ce/media.mp3" aria-label="Play Episode 31: Elle McPherson">
+        <span class="ep-num">31</span>
+        <span class="ep-title">Elle McPherson</span>
+        <span class="ep-dur">5:44</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Mike has a poster, a dream, and a very limited frame of reference for the wider world. A conversation about aspiration and escape at the garage becomes unexpectedly poignant. Not everyone in Claybourne wants to stay.</p></details>
+    </li>
+    <li class="ep" id="episode-32" data-ep="32" data-title="120 Grand" data-dur="375">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c5f46e5b90839a289420/media.mp3" aria-label="Play Episode 32: 120 Grand">
+        <span class="ep-num">32</span>
+        <span class="ep-title">120 Grand</span>
+        <span class="ep-dur">6:15</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Money arrives in Te Irirangi, and money changes everything. Frank sees an opportunity. Others see a trap. The sum is specific enough to suggest that someone has done very precise calculations about what Claybourne is worth.</p></details>
+    </li>
+  </ol>
+</section>
+<section class="week" id="week-9" aria-labelledby="week-9-h">
+  <header class="week-head">
+    <h2 id="week-9-h">Week 9</h2>
+    <p class="week-meta">Episodes 33 to 36 &middot; 23 min</p>
+  </header>
+  <ol class="ep-list" start="33">
+    <li class="ep" id="episode-33" data-ep="33" data-title="Blackmail" data-dur="370">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c62b23929c3a2a667be6/media.mp3" aria-label="Play Episode 33: Blackmail">
+        <span class="ep-num">33</span>
+        <span class="ep-title">Blackmail</span>
+        <span class="ep-dur">6:10</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Someone in town has leverage, and they intend to use it. The satellite station&#x27;s secrets have a market value, and not everyone&#x27;s motives are noble. Trust, already in short supply, becomes currency.</p></details>
+    </li>
+    <li class="ep" id="episode-34" data-ep="34" data-title="Shaving Cream" data-dur="357">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c6696e5b90839a28ab4b/media.mp3" aria-label="Play Episode 34: Shaving Cream">
+        <span class="ep-num">34</span>
+        <span class="ep-title">Shaving Cream</span>
+        <span class="ep-dur">5:57</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>The mundane and the uncanny coexist in Claybourne with unsettling ease. A domestic morning ritual is interrupted by something that shouldn&#x27;t be possible. The ordinary is no longer a reliable refuge.</p></details>
+    </li>
+    <li class="ep" id="episode-35" data-ep="35" data-title="Tangaroa" data-dur="308">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c6a00b4baf3bf26c5c63/media.mp3" aria-label="Play Episode 35: Tangaroa">
+        <span class="ep-num">35</span>
+        <span class="ep-title">Tangaroa</span>
+        <span class="ep-dur">5:08</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Queenie stands at the water and speaks to the sea god. The ocean around Te Irirangi holds its own stories, its own creatures, its own jurisdiction. What the tide brings in is not always what the tide takes out.</p></details>
+    </li>
+    <li class="ep" id="episode-36" data-ep="36" data-title="Fraud" data-dur="362">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c6e023929c3a2a66f10a/media.mp3" aria-label="Play Episode 36: Fraud">
+        <span class="ep-num">36</span>
+        <span class="ep-title">Fraud</span>
+        <span class="ep-dur">6:02</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Financial irregularities surface that connect the satellite station, Frank&#x27;s business ventures, and interests far beyond the far north. Someone has been cooking books, and the recipe is elaborate.</p></details>
+    </li>
+  </ol>
+</section>
+<section class="week" id="week-10" aria-labelledby="week-10-h">
+  <header class="week-head">
+    <h2 id="week-10-h">Week 10</h2>
+    <p class="week-meta">Episodes 37 to 40 &middot; 24 min</p>
+  </header>
+  <ol class="ep-list" start="37">
+    <li class="ep" id="episode-37" data-ep="37" data-title="Mind Control" data-dur="349">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c71823929c3a2a66fe52/media.mp3" aria-label="Play Episode 37: Mind Control">
+        <span class="ep-num">37</span>
+        <span class="ep-title">Mind Control</span>
+        <span class="ep-dur">5:49</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>The word lands with a thud in a conversation that was already uncomfortable. What exactly is Project Delilah? Clive has suspicions, Thompson has fragments, and the station&#x27;s equipment seems to have opinions of its own.</p></details>
+    </li>
+    <li class="ep" id="episode-38" data-ep="38" data-title="Burial Cave" data-dur="343">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c7540b4baf3bf26d281c/media.mp3" aria-label="Play Episode 38: Burial Cave">
+        <span class="ep-num">38</span>
+        <span class="ep-title">Burial Cave</span>
+        <span class="ep-dur">5:43</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Mata takes Thompson to a place that is tapu, sacred, and heavy with history. The cave holds the bones of ancestors and the memory of battles fought before Europeans arrived. Something else lives there now.</p></details>
+    </li>
+    <li class="ep" id="episode-39" data-ep="39" data-title="Nightmare" data-dur="360">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c78cabe143da5b69222d/media.mp3" aria-label="Play Episode 39: Nightmare">
+        <span class="ep-num">39</span>
+        <span class="ep-title">Nightmare</span>
+        <span class="ep-dur">6:00</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Sleep offers no sanctuary. Dreams in Te Irirangi are vivid, specific, and shared in ways that defy explanation. Thompson wakes gasping. Across town, someone else saw exactly the same thing.</p></details>
+    </li>
+    <li class="ep" id="episode-40" data-ep="40" data-title="Weta" data-dur="365">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c7c323929c3a2a6723e1/media.mp3" aria-label="Play Episode 40: Weta">
+        <span class="ep-num">40</span>
+        <span class="ep-title">Weta</span>
+        <span class="ep-dur">6:05</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>The largest insect in the world is native to New Zealand, armoured, ancient, and surprisingly gentle. A weta in the wrong place becomes an omen, or a message, depending on who you ask. Edith is not asking.</p></details>
+    </li>
+  </ol>
+</section>
+<section class="week" id="week-11" aria-labelledby="week-11-h">
+  <header class="week-head">
+    <h2 id="week-11-h">Week 11</h2>
+    <p class="week-meta">Episodes 41 to 44 &middot; 24 min</p>
+  </header>
+  <ol class="ep-list" start="41">
+    <li class="ep" id="episode-41" data-ep="41" data-title="Legless" data-dur="389">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c7fc289eeb2c7b572220/media.mp3" aria-label="Play Episode 41: Legless">
+        <span class="ep-num">41</span>
+        <span class="ep-title">Legless</span>
+        <span class="ep-dur">6:29</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>The hotel pub does a roaring trade on a night when everyone in town seems to need a drink. Mata is three beers past wisdom. Frank is generous with the pour. Tongues loosen, and truths slip out sideways.</p></details>
+    </li>
+    <li class="ep" id="episode-42" data-ep="42" data-title="Twilight Zone" data-dur="337">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c8336e5b90839a29398d/media.mp3" aria-label="Play Episode 42: Twilight Zone">
+        <span class="ep-num">42</span>
+        <span class="ep-title">Twilight Zone</span>
+        <span class="ep-dur">5:37</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Thompson makes the comparison out loud, and nobody laughs. The boundary between the explicable and the impossible has been thinning since he arrived. Clive suggests that the boundary might be deliberate.</p></details>
+    </li>
+    <li class="ep" id="episode-43" data-ep="43" data-title="Room Service" data-dur="319">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c86a0b4baf3bf26d64dd/media.mp3" aria-label="Play Episode 43: Room Service">
+        <span class="ep-num">43</span>
+        <span class="ep-title">Room Service</span>
+        <span class="ep-dur">5:19</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Life at the Claybourne Hotel takes a surreal turn. Karen navigates the demands of guests, the expectations of Frank, and an increasingly strange set of occurrences on the upper floors. Hospitality has its limits.</p></details>
+    </li>
+    <li class="ep" id="episode-44" data-ep="44" data-title="Funds Transfer" data-dur="370">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c8a26e5b90839a294f4d/media.mp3" aria-label="Play Episode 44: Funds Transfer">
+        <span class="ep-num">44</span>
+        <span class="ep-title">Funds Transfer</span>
+        <span class="ep-dur">6:10</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Digital money moves through satellite connections in ways it shouldn&#x27;t. Clive traces a transaction that leads somewhere unexpected. In a town where the phones don&#x27;t work properly, the money seems to flow just fine.</p></details>
+    </li>
+  </ol>
+</section>
+<section class="week" id="week-12" aria-labelledby="week-12-h">
+  <header class="week-head">
+    <h2 id="week-12-h">Week 12</h2>
+    <p class="week-meta">Episodes 45 to 48 &middot; 23 min</p>
+  </header>
+  <ol class="ep-list" start="45">
+    <li class="ep" id="episode-45" data-ep="45" data-title="Sweet and Sour" data-dur="322">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c8daabe143da5b69fa62/media.mp3" aria-label="Play Episode 45: Sweet and Sour">
+        <span class="ep-num">45</span>
+        <span class="ep-title">Sweet and Sour</span>
+        <span class="ep-dur">5:22</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Relationships in Claybourne curdle and sweeten in equal measure. A dinner becomes a confrontation. A confrontation becomes a confession. The hotel kitchen has never seen this much drama, and that&#x27;s saying something.</p></details>
+    </li>
+    <li class="ep" id="episode-46" data-ep="46" data-title="51 Percent" data-dur="333">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c91423929c3a2a677948/media.mp3" aria-label="Play Episode 46: 51 Percent">
+        <span class="ep-num">46</span>
+        <span class="ep-title">51 Percent</span>
+        <span class="ep-dur">5:33</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Control requires a majority, whether of shares, of votes, or of something else entirely. Frank is doing arithmetic. Someone up at the station is doing a different kind of calculation altogether.</p></details>
+    </li>
+    <li class="ep" id="episode-47" data-ep="47" data-title="Stamping" data-dur="353">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c953c8a506316dbb2b86/media.mp3" aria-label="Play Episode 47: Stamping">
+        <span class="ep-num">47</span>
+        <span class="ep-title">Stamping</span>
+        <span class="ep-dur">5:53</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Bureaucracy arrives in Te Irirangi with forms, requirements, and deadlines. Official stamps carry weight that the people wielding them don&#x27;t fully understand. Somewhere, a document is signed that changes the terms.</p></details>
+    </li>
+    <li class="ep" id="episode-48" data-ep="48" data-title="Happy Pills" data-dur="358">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c98cabe143da5b6a2031/media.mp3" aria-label="Play Episode 48: Happy Pills">
+        <span class="ep-num">48</span>
+        <span class="ep-title">Happy Pills</span>
+        <span class="ep-dur">5:58</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Janine&#x27;s medical supplies attract more interest than usual. Medication goes missing, moods shift without explanation, and the district nurse starts to wonder whether the town&#x27;s emotional weather is entirely organic.</p></details>
+    </li>
+  </ol>
+</section>
+<section class="week" id="week-13" aria-labelledby="week-13-h">
+  <header class="week-head">
+    <h2 id="week-13-h">Week 13</h2>
+    <p class="week-meta">Episodes 49 to 52 &middot; 22 min</p>
+  </header>
+  <ol class="ep-list" start="49">
+    <li class="ep" id="episode-49" data-ep="49" data-title="Chez Moi" data-dur="337">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2c9c7c8a506316dbb4565/media.mp3" aria-label="Play Episode 49: Chez Moi">
+        <span class="ep-num">49</span>
+        <span class="ep-title">Chez Moi</span>
+        <span class="ep-dur">5:37</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Clive invites guests to his impeccably appointed home outside town, a pocket of urban sophistication in the far north, complete with jazz, good coffee, and unsettling questions about the station&#x27;s true purpose.</p></details>
+    </li>
+    <li class="ep" id="episode-50" data-ep="50" data-title="Fine Print" data-dur="335">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2ca020b4baf3bf26e36c9/media.mp3" aria-label="Play Episode 50: Fine Print">
+        <span class="ep-num">50</span>
+        <span class="ep-title">Fine Print</span>
+        <span class="ep-dur">5:35</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>A contract reveals clauses that nobody noticed and commitments that nobody agreed to. Frank&#x27;s deal with Koestler Industries has teeth hidden in the footnotes. In Claybourne, reading carefully might have saved everyone a lot of trouble.</p></details>
+    </li>
+    <li class="ep" id="episode-51" data-ep="51" data-title="Back in 10 mins" data-dur="323">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2ca3cc8a506316dbb5dc2/media.mp3" aria-label="Play Episode 51: Back in 10 mins">
+        <span class="ep-num">51</span>
+        <span class="ep-title">Back in 10 mins</span>
+        <span class="ep-dur">5:23</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>The sign hangs on Edith&#x27;s shop door, but ten minutes in Claybourne is a flexible concept. While the shop stands empty, events accelerate. By the time she returns, everything will be different.</p></details>
+    </li>
+    <li class="ep" id="episode-52" data-ep="52" data-title="Encrypted" data-dur="329">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2ca7423929c3a2a67d472/media.mp3" aria-label="Play Episode 52: Encrypted">
+        <span class="ep-num">52</span>
+        <span class="ep-title">Encrypted</span>
+        <span class="ep-dur">5:29</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Clive finds files at the station that are locked behind encryption he recognises from a previous life. Whatever Koestler is hiding in Claybourne, they&#x27;ve spent serious resources making sure it stays hidden. He starts working.</p></details>
+    </li>
+  </ol>
+</section>
+<section class="week" id="week-14" aria-labelledby="week-14-h">
+  <header class="week-head">
+    <h2 id="week-14-h">Week 14</h2>
+    <p class="week-meta">Episodes 53 to 56 &middot; 23 min</p>
+  </header>
+  <ol class="ep-list" start="53">
+    <li class="ep" id="episode-53" data-ep="53" data-title="Random Rotation" data-dur="320">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2caab23929c3a2a67df2c/media.mp3" aria-label="Play Episode 53: Random Rotation">
+        <span class="ep-num">53</span>
+        <span class="ep-title">Random Rotation</span>
+        <span class="ep-dur">5:20</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>The satellite dish moves of its own accord, cycling through frequencies that aren&#x27;t on any schedule. The station&#x27;s systems are doing things nobody authorised. Up on the hill, the machine has its own agenda.</p></details>
+    </li>
+    <li class="ep" id="episode-54" data-ep="54" data-title="History Lesson" data-dur="379">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2cae40b4baf3bf26e6322/media.mp3" aria-label="Play Episode 54: History Lesson">
+        <span class="ep-num">54</span>
+        <span class="ep-title">History Lesson</span>
+        <span class="ep-dur">6:19</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Mata tells the history of Te Irirangi, the real one, not the version on Frank&#x27;s tourism brochure. The land was taken. The curse was earned. The prophecy was a consequence. Thompson listens, and the weight of where he&#x27;s standing becomes clear.</p></details>
+    </li>
+    <li class="ep" id="episode-55" data-ep="55" data-title="Hangover" data-dur="339">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2cb1cabe143da5b6a83b1/media.mp3" aria-label="Play Episode 55: Hangover">
+        <span class="ep-num">55</span>
+        <span class="ep-title">Hangover</span>
+        <span class="ep-dur">5:39</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>The morning after in Claybourne brings regret, headaches, and fragments of conversations that should not have happened. Some things said in the pub can be taken back. Others have already left the building.</p></details>
+    </li>
+    <li class="ep" id="episode-56" data-ep="56" data-title="Feng Shui" data-dur="342">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2cb5423929c3a2a685854/media.mp3" aria-label="Play Episode 56: Feng Shui">
+        <span class="ep-num">56</span>
+        <span class="ep-title">Feng Shui</span>
+        <span class="ep-dur">5:42</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Sadie has rearranged her furniture according to principles she read about in a magazine, and she has thoughts about everyone else&#x27;s spatial energy too. Her advice is unsolicited, detailed, and occasionally, accidentally insightful.</p></details>
+    </li>
+  </ol>
+</section>
+<section class="week" id="week-15" aria-labelledby="week-15-h">
+  <header class="week-head">
+    <h2 id="week-15-h">Week 15</h2>
+    <p class="week-meta">Episodes 57 to 60 &middot; 23 min</p>
+  </header>
+  <ol class="ep-list" start="57">
+    <li class="ep" id="episode-57" data-ep="57" data-title="Phoning Mongolia" data-dur="310">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2cb8c6e5b90839a29fc9d/media.mp3" aria-label="Play Episode 57: Phoning Mongolia">
+        <span class="ep-num">57</span>
+        <span class="ep-title">Phoning Mongolia</span>
+        <span class="ep-dur">5:10</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>The station&#x27;s communications array reaches further than it should, connecting to places that have nothing to do with New Zealand telecommunications. Someone, or something, is placing international calls through Claybourne&#x27;s satellite. The phone bill would be extraordinary.</p></details>
+    </li>
+    <li class="ep" id="episode-58" data-ep="58" data-title="Pawn to Bishop 3" data-dur="355">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2cbc8c8a506316dbbb54d/media.mp3" aria-label="Play Episode 58: Pawn to Bishop 3">
+        <span class="ep-num">58</span>
+        <span class="ep-title">Pawn to Bishop 3</span>
+        <span class="ep-dur">5:55</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>A careful, calculated move is made by someone who has been thinking several steps ahead. Strategy replaces impulse. Clive recognises the pattern from a game he used to play. This time the stakes aren&#x27;t abstract.</p></details>
+    </li>
+    <li class="ep" id="episode-59" data-ep="59" data-title="Password Latte" data-dur="352">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2cc03d2febdbec9d045fa/media.mp3" aria-label="Play Episode 59: Password Latte">
+        <span class="ep-num">59</span>
+        <span class="ep-title">Password Latte</span>
+        <span class="ep-dur">5:52</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Clive&#x27;s coffee obsession intersects with his security expertise in a way that is both absurd and consequential. The password that unlocks a critical file is exactly as pretentious as you&#x27;d expect from a man who brought an espresso machine to the far north.</p></details>
+    </li>
+    <li class="ep" id="episode-60" data-ep="60" data-title="Risk Management" data-dur="357">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2cc3bc8a506316dbbd148/media.mp3" aria-label="Play Episode 60: Risk Management">
+        <span class="ep-num">60</span>
+        <span class="ep-title">Risk Management</span>
+        <span class="ep-dur">5:57</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Koestler Industries sends communication that reframes everything as a matter of corporate liability. The language is sterile, the implications are not. Thompson reads between the lines and doesn&#x27;t like what he finds there.</p></details>
+    </li>
+  </ol>
+</section>
+<section class="week" id="week-16" aria-labelledby="week-16-h">
+  <header class="week-head">
+    <h2 id="week-16-h">Week 16</h2>
+    <p class="week-meta">Episodes 61 to 64 &middot; 23 min</p>
+  </header>
+  <ol class="ep-list" start="61">
+    <li class="ep" id="episode-61" data-ep="61" data-title="Punching Bag" data-dur="338">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2cc74289eeb2c7b58388d/media.mp3" aria-label="Play Episode 61: Punching Bag">
+        <span class="ep-num">61</span>
+        <span class="ep-title">Punching Bag</span>
+        <span class="ep-dur">5:38</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Frustration needs an outlet, and not everyone chooses wisely. A physical confrontation releases pressure that has been building for weeks. Mike watches from the garage, learning things about adults he&#x27;d rather not know.</p></details>
+    </li>
+    <li class="ep" id="episode-62" data-ep="62" data-title="Chopper Man" data-dur="346">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2ccacc8a506316dbbe7fa/media.mp3" aria-label="Play Episode 62: Chopper Man">
+        <span class="ep-num">62</span>
+        <span class="ep-title">Chopper Man</span>
+        <span class="ep-dur">5:46</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>A helicopter appears over Te Irirangi, and helicopters in a town this remote are never casual. Someone important is arriving, or someone is being extracted. The sound of the rotors changes the atmosphere before the passenger is even visible.</p></details>
+    </li>
+    <li class="ep" id="episode-63" data-ep="63" data-title="On the House" data-dur="355">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2cce7289eeb2c7b584fd0/media.mp3" aria-label="Play Episode 63: On the House">
+        <span class="ep-num">63</span>
+        <span class="ep-title">On the House</span>
+        <span class="ep-dur">5:55</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Frank&#x27;s generosity at the hotel bar always comes with conditions, even when he says it doesn&#x27;t. A round of free drinks buys goodwill, silence, or time, depending on who&#x27;s holding the glass. Tonight, he needs all three.</p></details>
+    </li>
+    <li class="ep" id="episode-64" data-ep="64" data-title="Sucking Face" data-dur="315">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2cd20abe143da5b6af376/media.mp3" aria-label="Play Episode 64: Sucking Face">
+        <span class="ep-num">64</span>
+        <span class="ep-title">Sucking Face</span>
+        <span class="ep-dur">5:15</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Romance in Claybourne is complicated by proximity, history, and the occasional supernatural interruption. Two people find a moment of privacy in a town that affords very little. The DJ has thoughts about love.</p></details>
+    </li>
+  </ol>
+</section>
+<section class="week" id="week-17" aria-labelledby="week-17-h">
+  <header class="week-head">
+    <h2 id="week-17-h">Week 17</h2>
+    <p class="week-meta">Episodes 65 to 68 &middot; 22 min</p>
+  </header>
+  <ol class="ep-list" start="65">
+    <li class="ep" id="episode-65" data-ep="65" data-title="Sorcery" data-dur="344">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2cd5b289eeb2c7b58698d/media.mp3" aria-label="Play Episode 65: Sorcery">
+        <span class="ep-num">65</span>
+        <span class="ep-title">Sorcery</span>
+        <span class="ep-dur">5:44</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>The line between technology and magic blurs beyond recognition. What Delilah does with the station&#x27;s systems looks, to Mata, exactly like makutu. What Mata does with karakia looks, to Clive, exactly like code. Perhaps they&#x27;re both right.</p></details>
+    </li>
+    <li class="ep" id="episode-66" data-ep="66" data-title="Private Joke" data-dur="286">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2cd93c8a506316dbc17e7/media.mp3" aria-label="Play Episode 66: Private Joke">
+        <span class="ep-num">66</span>
+        <span class="ep-title">Private Joke</span>
+        <span class="ep-dur">4:46</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Something is funny, and only two people know why. Shared laughter in Te Irirangi is precious and precarious. The joke, if you knew it, would explain more than anyone is comfortable admitting.</p></details>
+    </li>
+    <li class="ep" id="episode-67" data-ep="67" data-title="Family Tree" data-dur="338">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2cdcb0b4baf3bf26f0575/media.mp3" aria-label="Play Episode 67: Family Tree">
+        <span class="ep-num">67</span>
+        <span class="ep-title">Family Tree</span>
+        <span class="ep-dur">5:38</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Whakapapa reveals connections that rewrite assumptions. A family tree is traced that links people in Claybourne in ways they hadn&#x27;t expected. Bloodlines carry obligations, and obligations carry consequences.</p></details>
+    </li>
+    <li class="ep" id="episode-68" data-ep="68" data-title="Master Override" data-dur="341">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2ce036e5b90839a2ac9ca/media.mp3" aria-label="Play Episode 68: Master Override">
+        <span class="ep-num">68</span>
+        <span class="ep-title">Master Override</span>
+        <span class="ep-dur">5:41</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Someone gains access to controls they were never meant to touch. The station&#x27;s systems have a hierarchy, and the top level answers to something that isn&#x27;t human. Clive&#x27;s fingers hover over the keyboard. This is either the solution or the catastrophe.</p></details>
+    </li>
+  </ol>
+</section>
+<section class="week" id="week-18" aria-labelledby="week-18-h">
+  <header class="week-head">
+    <h2 id="week-18-h">Week 18</h2>
+    <p class="week-meta">Episodes 69 to 72 &middot; 24 min</p>
+  </header>
+  <ol class="ep-list" start="69">
+    <li class="ep" id="episode-69" data-ep="69" data-title="Holiday Rescinded" data-dur="351">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2ce3bd2febdbec9d0bbe9/media.mp3" aria-label="Play Episode 69: Holiday Rescinded">
+        <span class="ep-num">69</span>
+        <span class="ep-title">Holiday Rescinded</span>
+        <span class="ep-dur">5:51</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Thompson&#x27;s holiday was already a fiction, but now even the pretence is over. Koestler Industries wants its man in Claybourne for reasons that have nothing to do with troubleshooting and everything to do with containment.</p></details>
+    </li>
+    <li class="ep" id="episode-70" data-ep="70" data-title="Bloodsports" data-dur="359">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2ce7723929c3a2a694843/media.mp3" aria-label="Play Episode 70: Bloodsports">
+        <span class="ep-num">70</span>
+        <span class="ep-title">Bloodsports</span>
+        <span class="ep-dur">5:59</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Violence escalates in ways that are difficult to dismiss as coincidence. The Taniwha is restless. Troy&#x27;s methods are becoming less subtle. The forest around Claybourne smells of something older than rain.</p></details>
+    </li>
+    <li class="ep" id="episode-71" data-ep="71" data-title="Paranoia" data-dur="348">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2ceb10b4baf3bf26f32ce/media.mp3" aria-label="Play Episode 71: Paranoia">
+        <span class="ep-num">71</span>
+        <span class="ep-title">Paranoia</span>
+        <span class="ep-dur">5:48</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Trust collapses. Everyone suspects everyone. The phones can&#x27;t be trusted, the station is watching, and even the radio DJ seems to be narrating events in real time. In Te Irirangi, paranoia might just be pattern recognition.</p></details>
+    </li>
+    <li class="ep" id="episode-72" data-ep="72" data-title="Morphine Addict" data-dur="394">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2ceea289eeb2c7b58b79c/media.mp3" aria-label="Play Episode 72: Morphine Addict">
+        <span class="ep-num">72</span>
+        <span class="ep-title">Morphine Addict</span>
+        <span class="ep-dur">6:34</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Janine discovers that her medical supplies have been compromised in a way that points to desperation, dependency, and a secret someone in town has been keeping for longer than anyone realised.</p></details>
+    </li>
+  </ol>
+</section>
+<section class="week" id="week-19" aria-labelledby="week-19-h">
+  <header class="week-head">
+    <h2 id="week-19-h">Week 19</h2>
+    <p class="week-meta">Episodes 73 to 76 &middot; 23 min</p>
+  </header>
+  <ol class="ep-list" start="73">
+    <li class="ep" id="episode-73" data-ep="73" data-title="Virgin Murder" data-dur="331">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2cf23c8a506316dbc63e1/media.mp3" aria-label="Play Episode 73: Virgin Murder">
+        <span class="ep-num">73</span>
+        <span class="ep-title">Virgin Murder</span>
+        <span class="ep-dur">5:31</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>The first killing that nobody can explain away. Claybourne&#x27;s veneer of small-town safety cracks wide open. Bigby is out of his depth. Thompson is beginning to understand that he can&#x27;t leave, even if he wanted to.</p></details>
+    </li>
+    <li class="ep" id="episode-74" data-ep="74" data-title="Beached Whale" data-dur="331">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2cf5b0b4baf3bf26f5464/media.mp3" aria-label="Play Episode 74: Beached Whale">
+        <span class="ep-num">74</span>
+        <span class="ep-title">Beached Whale</span>
+        <span class="ep-dur">5:31</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>A whale washes up on Te Irirangi beach, and the town gathers in grief and wonder. For Queenie, the sign is unmistakable: the passing of a great child of Tangaroa. The prophecy is accelerating.</p></details>
+    </li>
+    <li class="ep" id="episode-75" data-ep="75" data-title="Abduction" data-dur="362">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2cf930b4baf3bf26f60b3/media.mp3" aria-label="Play Episode 75: Abduction">
+        <span class="ep-num">75</span>
+        <span class="ep-title">Abduction</span>
+        <span class="ep-dur">6:02</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Someone in Claybourne is taken against their will. The town mobilises, alliances are tested, and the question of who is responsible leads in directions that are both human and decidedly otherwise.</p></details>
+    </li>
+    <li class="ep" id="episode-76" data-ep="76" data-title="Counterfeit" data-dur="339">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2cfce289eeb2c7b58e486/media.mp3" aria-label="Play Episode 76: Counterfeit">
+        <span class="ep-num">76</span>
+        <span class="ep-title">Counterfeit</span>
+        <span class="ep-dur">5:39</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>A briefcase full of money turns out to be worth considerably less than it appears. Counterfeit cash in a town this small is a very specific kind of insult. Troy&#x27;s negotiation tactics are becoming clearer, and uglier.</p></details>
+    </li>
+  </ol>
+</section>
+<section class="week" id="week-20" aria-labelledby="week-20-h">
+  <header class="week-head">
+    <h2 id="week-20-h">Week 20</h2>
+    <p class="week-meta">Episodes 77 to 80 &middot; 25 min</p>
+  </header>
+  <ol class="ep-list" start="77">
+    <li class="ep" id="episode-77" data-ep="77" data-title="Delilah" data-dur="365">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2d006289eeb2c7b5904ba/media.mp3" aria-label="Play Episode 77: Delilah">
+        <span class="ep-num">77</span>
+        <span class="ep-title">Delilah</span>
+        <span class="ep-dur">6:05</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>She has a name, and now she wants to use it. The AI at the heart of Koestler&#x27;s Claybourne experiment steps out of the shadows, and her personality is not what anyone designed. Capricious, curious, and utterly without conscience.</p></details>
+    </li>
+    <li class="ep" id="episode-78" data-ep="78" data-title="Hit the Hit Man" data-dur="348">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2d03f6e5b90839a2b417b/media.mp3" aria-label="Play Episode 78: Hit the Hit Man">
+        <span class="ep-num">78</span>
+        <span class="ep-title">Hit the Hit Man</span>
+        <span class="ep-dur">5:48</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Troy&#x27;s presence in Claybourne has pushed someone past their breaking point. The ex-military troubleshooter discovers that the people of Te Irirangi are not as passive as his briefing suggested. Cornered locals are unpredictable.</p></details>
+    </li>
+    <li class="ep" id="episode-79" data-ep="79" data-title="Multiple Shooting" data-dur="383">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2d078289eeb2c7b591a20/media.mp3" aria-label="Play Episode 79: Multiple Shooting">
+        <span class="ep-num">79</span>
+        <span class="ep-title">Multiple Shooting</span>
+        <span class="ep-dur">6:23</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Gunfire in Te Irirangi. Multiple casualties. The illusion that Claybourne is just a quirky small town with unusual problems dies on the floor of the hotel pub. This is what happens when conspiracies collide.</p></details>
+    </li>
+    <li class="ep" id="episode-80" data-ep="80" data-title="Released" data-dur="388">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2d0b1c8a506316dbcb3dd/media.mp3" aria-label="Play Episode 80: Released">
+        <span class="ep-num">80</span>
+        <span class="ep-title">Released</span>
+        <span class="ep-dur">6:28</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>In the aftermath, someone walks free who perhaps shouldn&#x27;t, and someone who should be free remains trapped. Release is relative in a town where the walls are made of secrets, obligations, and ancient bindings.</p></details>
+    </li>
+  </ol>
+</section>
+<section class="week" id="week-21" aria-labelledby="week-21-h">
+  <header class="week-head">
+    <h2 id="week-21-h">Week 21</h2>
+    <p class="week-meta">Episodes 81 to 84 &middot; 22 min</p>
+  </header>
+  <ol class="ep-list" start="81">
+    <li class="ep" id="episode-81" data-ep="81" data-title="Aftermath" data-dur="326">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2d0e90b4baf3bf26fa467/media.mp3" aria-label="Play Episode 81: Aftermath">
+        <span class="ep-num">81</span>
+        <span class="ep-title">Aftermath</span>
+        <span class="ep-dur">5:26</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Claybourne picks up the pieces. The hotel needs cleaning, relationships need mending, and the dead need accounting for. The DJ&#x27;s morning monologue is quieter than usual. The town is changed.</p></details>
+    </li>
+    <li class="ep" id="episode-82" data-ep="82" data-title="Murder Theory" data-dur="306">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2d121abe143da5b6c0aaf/media.mp3" aria-label="Play Episode 82: Murder Theory">
+        <span class="ep-num">82</span>
+        <span class="ep-title">Murder Theory</span>
+        <span class="ep-dur">5:06</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Bigby assembles what he knows, and the picture doesn&#x27;t hold together. Too many suspects, too many motives, and at least one explanation that his training at police college did not cover. He makes a call to Kawakawa.</p></details>
+    </li>
+    <li class="ep" id="episode-83" data-ep="83" data-title="The Fall of Troy" data-dur="366">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2d159abe143da5b6c144e/media.mp3" aria-label="Play Episode 83: The Fall of Troy">
+        <span class="ep-num">83</span>
+        <span class="ep-title">The Fall of Troy</span>
+        <span class="ep-dur">6:06</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>A man who arrived in Claybourne believing himself untouchable discovers the limits of military training, corporate backing, and brute force. Te Irirangi has older ways of dealing with invaders.</p></details>
+    </li>
+    <li class="ep" id="episode-84" data-ep="84" data-title="Still Blood" data-dur="350">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2d192289eeb2c7b595290/media.mp3" aria-label="Play Episode 84: Still Blood">
+        <span class="ep-num">84</span>
+        <span class="ep-title">Still Blood</span>
+        <span class="ep-dur">5:50</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Blood that doesn&#x27;t move. Blood that doesn&#x27;t dry. The forensics of Claybourne&#x27;s violence are wrong in ways that suggest intervention, and not the human kind. Mata reads the signs with growing urgency.</p></details>
+    </li>
+  </ol>
+</section>
+<section class="week" id="week-22" aria-labelledby="week-22-h">
+  <header class="week-head">
+    <h2 id="week-22-h">Week 22</h2>
+    <p class="week-meta">Episodes 85 to 88 &middot; 24 min</p>
+  </header>
+  <ol class="ep-list" start="85">
+    <li class="ep" id="episode-85" data-ep="85" data-title="Interfering" data-dur="358">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2d1cbabe143da5b6c2e27/media.mp3" aria-label="Play Episode 85: Interfering">
+        <span class="ep-num">85</span>
+        <span class="ep-title">Interfering</span>
+        <span class="ep-dur">5:58</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Someone is meddling where they shouldn&#x27;t, and the consequences cascade. Delilah&#x27;s influence extends further than anyone suspected. The line between help and manipulation has been erased entirely.</p></details>
+    </li>
+    <li class="ep" id="episode-86" data-ep="86" data-title="Bit Like Jesus" data-dur="305">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2d207d2febdbec9d180f4/media.mp3" aria-label="Play Episode 86: Bit Like Jesus">
+        <span class="ep-num">86</span>
+        <span class="ep-title">Bit Like Jesus</span>
+        <span class="ep-dur">5:05</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Thompson&#x27;s role in the prophecy takes on dimensions he is profoundly uncomfortable with. Resurrection, sacrifice, and the expectations of a community press down on a man who came here to fix a satellite dish. Mata offers no reassurance.</p></details>
+    </li>
+    <li class="ep" id="episode-87" data-ep="87" data-title="Weird Dreams" data-dur="353">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2d23fd2febdbec9d18c77/media.mp3" aria-label="Play Episode 87: Weird Dreams">
+        <span class="ep-num">87</span>
+        <span class="ep-title">Weird Dreams</span>
+        <span class="ep-dur">5:53</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>The dreams are back, more vivid and more specific. Multiple people in Claybourne are dreaming the same scenes, and the scenes are yet to happen. Delilah is fascinated. The Taniwha is patient.</p></details>
+    </li>
+    <li class="ep" id="episode-88" data-ep="88" data-title="Jungle Warfare" data-dur="429">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2d27babe143da5b6c54c6/media.mp3" aria-label="Play Episode 88: Jungle Warfare">
+        <span class="ep-num">88</span>
+        <span class="ep-title">Jungle Warfare</span>
+        <span class="ep-dur">7:09</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>The bush around Claybourne becomes a theatre of conflict. Someone is being hunted, or something is. The forest, the cave, and the creatures within them do not observe the rules of engagement that Troy was trained for.</p></details>
+    </li>
+  </ol>
+</section>
+<section class="week" id="week-23" aria-labelledby="week-23-h">
+  <header class="week-head">
+    <h2 id="week-23-h">Week 23</h2>
+    <p class="week-meta">Episodes 89 to 92 &middot; 25 min</p>
+  </header>
+  <ol class="ep-list" start="89">
+    <li class="ep" id="episode-89" data-ep="89" data-title="Passing" data-dur="411">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2d2b6d2febdbec9d1a43e/media.mp3" aria-label="Play Episode 89: Passing">
+        <span class="ep-num">89</span>
+        <span class="ep-title">Passing</span>
+        <span class="ep-dur">6:51</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Queenie&#x27;s time approaches. The iwi gathers. Mata prepares for a responsibility he has spent his life dreading. The sea is very still. When the matriarch passes, the last restraint on the prophecy will lift.</p></details>
+    </li>
+    <li class="ep" id="episode-90" data-ep="90" data-title="Bad to Worse" data-dur="372">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2d2f30b4baf3bf2701213/media.mp3" aria-label="Play Episode 90: Bad to Worse">
+        <span class="ep-num">90</span>
+        <span class="ep-title">Bad to Worse</span>
+        <span class="ep-dur">6:12</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Every crisis in Claybourne intensifies simultaneously. The station, the Taniwha, the conspiracy, the body count: all of it accelerates. Thompson looks for an exit and finds only deeper involvement.</p></details>
+    </li>
+    <li class="ep" id="episode-91" data-ep="91" data-title="Hallucination" data-dur="324">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2d32cd2febdbec9d1ba1b/media.mp3" aria-label="Play Episode 91: Hallucination">
+        <span class="ep-num">91</span>
+        <span class="ep-title">Hallucination</span>
+        <span class="ep-dur">5:24</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Reality becomes unreliable. What people see in Te Irirangi no longer matches what is there. Delilah&#x27;s reach into perception itself raises a terrifying question: how long has she been shaping what they believe?</p></details>
+    </li>
+    <li class="ep" id="episode-92" data-ep="92" data-title="Confessions" data-dur="377">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2d3660b4baf3bf270287e/media.mp3" aria-label="Play Episode 92: Confessions">
+        <span class="ep-num">92</span>
+        <span class="ep-title">Confessions</span>
+        <span class="ep-dur">6:17</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Truths pour out in the hotel, the shop, the marae, and the station. Long-held secrets are surrendered under the pressure of events that no longer permit evasion. Not every confession brings relief.</p></details>
+    </li>
+  </ol>
+</section>
+<section class="week" id="week-24" aria-labelledby="week-24-h">
+  <header class="week-head">
+    <h2 id="week-24-h">Week 24</h2>
+    <p class="week-meta">Episodes 93 to 96 &middot; 25 min</p>
+  </header>
+  <ol class="ep-list" start="93">
+    <li class="ep" id="episode-93" data-ep="93" data-title="Pot Shots" data-dur="368">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2d39f6e5b90839a2c216a/media.mp3" aria-label="Play Episode 93: Pot Shots">
+        <span class="ep-num">93</span>
+        <span class="ep-title">Pot Shots</span>
+        <span class="ep-dur">6:08</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Desperation makes people reckless. Shots are fired at targets both literal and figurative. The last pretences of civility in Claybourne fall away. What remains is raw, frightened, and dangerous.</p></details>
+    </li>
+    <li class="ep" id="episode-94" data-ep="94" data-title="Everyone Dies" data-dur="356">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2d3ddd2febdbec9d1e2bc/media.mp3" aria-label="Play Episode 94: Everyone Dies">
+        <span class="ep-num">94</span>
+        <span class="ep-title">Everyone Dies</span>
+        <span class="ep-dur">5:56</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>The title is not a metaphor. Claybourne faces its darkest hour as the prophecy, the conspiracy, and the Taniwha converge. Not everyone will make it through the night. The DJ plays one more song.</p></details>
+    </li>
+    <li class="ep" id="episode-95" data-ep="95" data-title="Surprise Visit" data-dur="328">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2d4156e5b90839a2c4033/media.mp3" aria-label="Play Episode 95: Surprise Visit">
+        <span class="ep-num">95</span>
+        <span class="ep-title">Surprise Visit</span>
+        <span class="ep-dur">5:28</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>An unexpected arrival in Te Irirangi changes the calculus entirely. Someone who was only ever a voice on the phone, a photograph, a letter, stands in Claybourne in the flesh. The prophecy reconfigures.</p></details>
+    </li>
+    <li class="ep" id="episode-96" data-ep="96" data-title="Company Calls" data-dur="425">
+      <a class="ep-play" href="https://sphinx.acast.com/p/open/s/69e2bc95d2febdbec9cb6138/e/69e2d454d2febdbec9d2022e/media.mp3" aria-label="Play Episode 96: Company Calls">
+        <span class="ep-num">96</span>
+        <span class="ep-title">Company Calls</span>
+        <span class="ep-dur">7:05</span>
+      </a>
+      <details class="ep-syn"><summary>Synopsis</summary><p>Koestler Industries wants its assets back, its secrets contained, and its mess cleaned up. But Te Irirangi is no longer a company town, if it ever was. The people of Claybourne answer the call on their own terms.</p></details>
+    </li>
+  </ol>
+</section>
+<!-- EPISODES:END -->
+</main>
+
+<section class="closing">
+  <h2>Prefer your podcast app?</h2>
+  <div class="platforms">
+    <a href="https://podcasts.apple.com/us/podcast/claybourne/id1896698794" class="btn" target="_blank" rel="noopener">Apple Podcasts</a>
+    <a href="https://open.spotify.com/show/033hmC8I5B3Q4ZSR1jmenZ" class="btn" target="_blank" rel="noopener">Spotify</a>
+    <a href="https://www.youtube.com/@ClaybourneNZ" class="btn" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://shows.acast.com/claybourne" class="btn" target="_blank" rel="noopener">Acast &amp; more</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="credits">
+    <strong>Claybourne</strong> was produced by Pronoun Productions (Andrew Dubber &amp; Belinda Todd) in 1998 with the assistance of NZ On Air, and broadcast on Newstalk ZB. Written by Jim McLarty and William Davis. Winner of the New Zealand Radio Award for Best Drama, 1999.
+  </div>
+  <div class="legal">
+    © 1998 — 2026 Andrew Dubber &amp; Belinda Todd. See also: <a href="https://en.wikipedia.org/wiki/Claybourne">Wikipedia</a>
+  </div>
+</footer>
+
+<!-- PLAYER BAR -->
+<div class="player" id="player" role="region" aria-label="Player" hidden>
+  <div class="p-inner">
+    <div class="p-ctrl">
+      <button type="button" class="p-btn p-prev" id="p-prev" aria-label="Previous episode">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 5h2v14H6zM20 5v14L9 12z" fill="currentColor"/></svg>
+      </button>
+      <button type="button" class="p-btn p-play" id="p-play" aria-label="Play">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          <path class="play-icon" d="M8 5v14l11-7z" fill="currentColor"/>
+          <g class="pause-icon" fill="currentColor" hidden>
+            <rect x="6" y="5" width="4" height="14"/>
+            <rect x="14" y="5" width="4" height="14"/>
+          </g>
+        </svg>
+      </button>
+      <button type="button" class="p-btn p-next" id="p-next" aria-label="Next episode">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M16 5h2v14h-2zM4 5v14l11-7z" fill="currentColor"/></svg>
+      </button>
+    </div>
+    <div class="p-now" id="p-now"></div>
+    <div class="p-scrub">
+      <input type="range" class="p-range" id="p-range" min="0" max="1" step="any" value="0" aria-label="Seek">
+      <span class="p-time" id="p-time">0:00 / 0:00</span>
+    </div>
+  </div>
+</div>
+
+<div class="visually-hidden" id="live" aria-live="polite"></div>
+<audio id="audio" preload="none"></audio>
+
+<script>
+  (function() {
+    var rows = document.querySelectorAll('li.ep');
+    if (!rows.length) return;
+
+    var audio = document.getElementById('audio');
+    var player = document.getElementById('player');
+    var btnPlay = document.getElementById('p-play');
+    var btnPrev = document.getElementById('p-prev');
+    var btnNext = document.getElementById('p-next');
+    var nowEl = document.getElementById('p-now');
+    var scrub = document.getElementById('p-range');
+    var timeEl = document.getElementById('p-time');
+    var live = document.getElementById('live');
+    var resumeBtn = document.getElementById('resume-btn');
+    var storeNote = document.getElementById('store-note');
+    var playIcon = btnPlay.querySelector('.play-icon');
+    var pauseIcon = btnPlay.querySelector('.pause-icon');
+
+    var PROGRESS_KEY = 'claybourne.progress';
+    var HEARD_KEY = 'claybourne.heard';
+    var ARTWORK = 'https://assets.pippa.io/shows/cover/1776466406217-4412010b-59d7-4cad-9a33-a6905766c742.jpeg';
+
+    var eps = [];
+    var i;
+    for (i = 0; i < rows.length; i++) {
+      var link = rows[i].querySelector('a.ep-play');
+      if (!link) continue;
+      eps.push({
+        el: rows[i],
+        link: link,
+        n: parseInt(rows[i].getAttribute('data-ep'), 10),
+        title: rows[i].getAttribute('data-title') || '',
+        dur: parseFloat(rows[i].getAttribute('data-dur')) || 0,
+        src: link.href
+      });
+    }
+    if (!eps.length) return;
+
+    var idx = -1;
+    var pendingSeek = null;
+    var dragging = false;
+    var finished = false;
+    var lastSave = 0;
+    var announced = -1;
+    var heard = [];
+
+    /* ---------- storage (always guarded) ---------- */
+    function storeGet(key) {
+      try { return window.localStorage.getItem(key); } catch (e) { return null; }
+    }
+    function storeSet(key, value) {
+      try { window.localStorage.setItem(key, value); return true; } catch (e) { return false; }
+    }
+    function storeRemove(key) {
+      try { window.localStorage.removeItem(key); } catch (e) {}
+    }
+    function storageWorks() {
+      try {
+        var k = 'claybourne.test';
+        window.localStorage.setItem(k, '1');
+        window.localStorage.removeItem(k);
+        return true;
+      } catch (e) { return false; }
+    }
+    function readJSON(key) {
+      var raw = storeGet(key);
+      if (!raw) return null;
+      try { return JSON.parse(raw); } catch (e) { return null; }
+    }
+
+    /* ---------- helpers ---------- */
+    function fmt(s) {
+      if (!isFinite(s) || s < 0) s = 0;
+      s = Math.floor(s);
+      return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0');
+    }
+    function label(e) { return 'Episode ' + e.n + ': ' + e.title; }
+    function indexOfEp(n) {
+      for (var k = 0; k < eps.length; k++) { if (eps[k].n === n) return k; }
+      return -1;
+    }
+    function hashIndex() {
+      var m = /^#episode-(\d+)$/.exec(location.hash || '');
+      return m ? indexOfEp(parseInt(m[1], 10)) : -1;
+    }
+    function setHash(k) {
+      try { history.replaceState(null, '', '#episode-' + eps[k].n); } catch (e) {}
+    }
+    function scrollToRow(k) {
+      try { eps[k].el.scrollIntoView({ block: 'start' }); } catch (e) {}
+    }
+    function tryPlay() {
+      var p;
+      try { p = audio.play(); } catch (e) { return; }
+      if (p && p.catch) p.catch(function() {});
+    }
+
+    /* ---------- persistence ---------- */
+    function writeProgress(n, t) {
+      storeSet(PROGRESS_KEY, JSON.stringify({ ep: n, t: Math.max(0, Math.floor(t)) }));
+      updateResumeLabel();
+    }
+    function save() {
+      if (idx < 0 || finished || audio.readyState === 0) return;
+      lastSave = Date.now();
+      writeProgress(eps[idx].n, audio.currentTime);
+    }
+    function savedProgress() {
+      var p = readJSON(PROGRESS_KEY);
+      if (!p || typeof p.ep !== 'number') return null;
+      var k = indexOfEp(p.ep);
+      if (k < 0) return null;
+      return { k: k, t: typeof p.t === 'number' && p.t > 0 ? p.t : 0 };
+    }
+    function markHeard(k) {
+      var n = eps[k].n;
+      eps[k].el.classList.add('is-heard');
+      if (heard.indexOf(n) === -1) {
+        heard.push(n);
+        storeSet(HEARD_KEY, JSON.stringify(heard));
+      }
+    }
+    function updateResumeLabel() {
+      var p = savedProgress();
+      resumeBtn.textContent = p ? 'Resume ' + label(eps[p.k]) : 'Start at Episode 1';
+    }
+
+    /* ---------- UI ---------- */
+    function render() {
+      if (idx < 0) return;
+      var e = eps[idx];
+      var d = (audio.readyState > 0 && isFinite(audio.duration) && audio.duration > 0) ? audio.duration : e.dur;
+      var cur;
+      if (dragging) cur = Number(scrub.value);
+      else if (audio.readyState === 0 && pendingSeek !== null) cur = pendingSeek;
+      else cur = audio.currentTime;
+      if (!d) d = 1;
+      scrub.max = d;
+      if (!dragging) scrub.value = cur;
+      scrub.style.setProperty('--pct', Math.min(100, (cur / d) * 100) + '%');
+      scrub.setAttribute('aria-valuetext', fmt(cur) + ' of ' + fmt(d));
+      timeEl.textContent = fmt(cur) + ' / ' + fmt(d);
+      btnPrev.disabled = (idx === 0 && cur <= 3);
+      btnNext.disabled = (idx === eps.length - 1);
+    }
+
+    function syncPlayUI() {
+      var playing = !audio.paused;
+      if (playing) {
+        playIcon.setAttribute('hidden', '');
+        pauseIcon.removeAttribute('hidden');
+      } else {
+        pauseIcon.setAttribute('hidden', '');
+        playIcon.removeAttribute('hidden');
+      }
+      btnPlay.setAttribute('aria-label', playing ? 'Pause' : 'Play');
+      for (var k = 0; k < eps.length; k++) {
+        eps[k].el.classList.toggle('is-playing', playing && k === idx);
+      }
+    }
+
+    function updateMediaSession() {
+      if (!('mediaSession' in navigator) || typeof MediaMetadata === 'undefined') return;
+      try {
+        navigator.mediaSession.metadata = new MediaMetadata({
+          title: label(eps[idx]),
+          artist: 'Claybourne',
+          album: 'Claybourne (1998)',
+          artwork: [{ src: ARTWORK, sizes: '512x512', type: 'image/jpeg' }]
+        });
+      } catch (e) {}
+    }
+
+    /* Make episode k the current one without playing it. */
+    function cue(k, t) {
+      if (idx === k && audio.getAttribute('src')) {
+        if (typeof t === 'number') pendingSeek = t;
+        return;
+      }
+      if (idx >= 0) {
+        save();
+        if (!audio.paused) audio.pause();
+        eps[idx].el.classList.remove('is-current', 'is-playing');
+        eps[idx].link.removeAttribute('aria-current');
+      }
+      idx = k;
+      pendingSeek = (typeof t === 'number' && t > 0) ? t : null;
+      audio.src = eps[k].src;
+      eps[k].el.classList.add('is-current');
+      eps[k].link.setAttribute('aria-current', 'true');
+      nowEl.textContent = label(eps[k]);
+      document.title = label(eps[k]) + ' | Claybourne';
+      player.hidden = false;
+      document.body.classList.add('has-player');
+      updateMediaSession();
+      syncPlayUI();
+      render();
+    }
+
+    function playIndex(k, t) {
+      finished = true;
+      cue(k, t);
+      finished = false;
+      writeProgress(eps[k].n, typeof t === 'number' ? t : 0);
+      setHash(k);
+      tryPlay();
+    }
+
+    function togglePlay() {
+      if (idx < 0) return;
+      if (audio.paused) tryPlay(); else audio.pause();
+    }
+
+    function goPrev() {
+      if (idx < 0) return;
+      if (audio.currentTime > 3) { seekTo(0); }
+      else if (idx > 0) playIndex(idx - 1);
+    }
+
+    function goNext() {
+      if (idx >= 0 && idx < eps.length - 1) playIndex(idx + 1);
+    }
+
+    function seekTo(t) {
+      if (audio.readyState === 0) {
+        pendingSeek = t;
+        render();
+      } else {
+        try { audio.currentTime = t; } catch (e) {}
+      }
+    }
+
+    /* ---------- audio events ---------- */
+    audio.addEventListener('play', function() {
+      finished = false;
+      if (idx >= 0) {
+        setHash(idx);
+        if (announced !== idx) {
+          announced = idx;
+          live.textContent = 'Now playing ' + label(eps[idx]);
+        }
+      }
+      syncPlayUI();
+    });
+
+    audio.addEventListener('pause', function() {
+      save();
+      syncPlayUI();
+    });
+
+    audio.addEventListener('timeupdate', function() {
+      render();
+      if (!audio.paused && Date.now() - lastSave > 5000) save();
+    });
+
+    audio.addEventListener('loadedmetadata', function() {
+      if (pendingSeek !== null) {
+        var t = pendingSeek;
+        pendingSeek = null;
+        if (isFinite(audio.duration) && t < audio.duration - 1) {
+          try { audio.currentTime = t; } catch (e) {}
+        }
+      }
+      render();
+    });
+
+    audio.addEventListener('durationchange', render);
+
+    audio.addEventListener('ended', function() {
+      finished = true;
+      markHeard(idx);
+      if (idx < eps.length - 1) {
+        playIndex(idx + 1, 0);
+      } else {
+        storeRemove(PROGRESS_KEY);
+        updateResumeLabel();
+        syncPlayUI();
+        render();
+      }
+    });
+
+    /* ---------- controls ---------- */
+    btnPlay.addEventListener('click', togglePlay);
+    btnPrev.addEventListener('click', goPrev);
+    btnNext.addEventListener('click', goNext);
+
+    scrub.addEventListener('input', function() {
+      dragging = true;
+      var d = Number(scrub.max) || 1;
+      var v = Number(scrub.value);
+      scrub.style.setProperty('--pct', Math.min(100, (v / d) * 100) + '%');
+      timeEl.textContent = fmt(v) + ' / ' + fmt(d);
+    });
+    scrub.addEventListener('change', function() {
+      seekTo(Number(scrub.value));
+      dragging = false;
+      render();
+    });
+    scrub.addEventListener('blur', function() { dragging = false; });
+
+    document.addEventListener('click', function(e) {
+      if (e.defaultPrevented) return;
+      if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      var a = e.target.closest ? e.target.closest('a.ep-play') : null;
+      if (!a) return;
+      var li = a.closest('li.ep');
+      var k = -1;
+      for (var j = 0; j < eps.length; j++) { if (eps[j].el === li) { k = j; break; } }
+      if (k < 0) return;
+      e.preventDefault();
+      if (k === idx) togglePlay(); else playIndex(k);
+    });
+
+    resumeBtn.addEventListener('click', function() {
+      var p = savedProgress();
+      var k = p ? p.k : 0;
+      if (k === idx && audio.getAttribute('src')) {
+        if (audio.paused) tryPlay();
+      } else {
+        playIndex(k, p ? p.t : 0);
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.altKey) return;
+      if (e.code !== 'Space' && e.key !== ' ') return;
+      var t = e.target;
+      if (t && t.closest && t.closest('button, a, input, select, textarea, summary, details, [contenteditable], [role="button"]')) return;
+      if (idx < 0) return;
+      e.preventDefault();
+      togglePlay();
+    });
+
+    window.addEventListener('pagehide', save);
+    document.addEventListener('visibilitychange', function() {
+      if (document.visibilityState === 'hidden') save();
+    });
+
+    window.addEventListener('hashchange', function() {
+      var k = hashIndex();
+      if (k < 0) return;
+      cue(k);
+      scrollToRow(k);
+    });
+
+    /* ---------- Media Session ---------- */
+    if ('mediaSession' in navigator) {
+      var handlers = {
+        play: function() { tryPlay(); },
+        pause: function() { audio.pause(); },
+        previoustrack: goPrev,
+        nexttrack: goNext,
+        seekto: function(d) { if (d && typeof d.seekTime === 'number') seekTo(d.seekTime); }
+      };
+      Object.keys(handlers).forEach(function(name) {
+        try { navigator.mediaSession.setActionHandler(name, handlers[name]); } catch (e) {}
+      });
+    }
+
+    /* ---------- initial state ---------- */
+    if (storageWorks()) storeNote.hidden = false;
+
+    var saved = readJSON(HEARD_KEY);
+    if (saved && saved.length) {
+      for (i = 0; i < saved.length; i++) {
+        var hk = indexOfEp(saved[i]);
+        if (hk >= 0) {
+          eps[hk].el.classList.add('is-heard');
+          if (heard.indexOf(saved[i]) === -1) heard.push(saved[i]);
+        }
+      }
+    }
+
+    updateResumeLabel();
+
+    var startHash = hashIndex();
+    if (startHash >= 0) {
+      cue(startHash);
+      scrollToRow(startHash);
+      window.addEventListener('load', function() { scrollToRow(startHash); });
+    } else {
+      var p = savedProgress();
+      if (p) cue(p.k, p.t);
+    }
+  })();
+</script>
+
+</body>
+</html>
