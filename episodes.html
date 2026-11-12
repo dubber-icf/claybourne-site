@@ -1787,7 +1787,7 @@
       }
       if (idx >= 0) {
         save();
-        if (!audio.paused) audio.pause();
+        if (!audio.paused) userPause();
         eps[idx].el.classList.remove('is-current', 'is-playing');
         eps[idx].link.removeAttribute('aria-current');
       }
@@ -1814,9 +1814,15 @@
       tryPlay();
     }
 
+    /* A pause the listener asked for: playback is no longer wanted. */
+    function userPause() {
+      wantPlay = false;
+      audio.pause();
+    }
+
     function togglePlay() {
       if (idx < 0) return;
-      if (audio.paused) tryPlay(); else audio.pause();
+      if (audio.paused) tryPlay(); else userPause();
     }
 
     function goPrev() {
@@ -1969,7 +1975,7 @@
     if ('mediaSession' in navigator) {
       var handlers = {
         play: function() { tryPlay(); },
-        pause: function() { audio.pause(); },
+        pause: function() { userPause(); },
         previoustrack: goPrev,
         nexttrack: goNext,
         seekto: function(d) { if (d && typeof d.seekTime === 'number') seekTo(d.seekTime); }
